@@ -1,0 +1,689 @@
+body{
+    font-family: url('fonts/Gotham-Bold.eot');
+}
+.nav-contact{
+background-color:#2E2E2E;
+color: white;
+position: absolute;
+width: 100%;
+height: 50px;
+left: 0px;
+top: 0px;
+overflow: hidden;
+position: fixed;
+
+}
+.line1{
+width: 40px;
+height: 0px;
+border: 1px solid #4E4E4E;
+transform: rotate(-90deg);
+}
+
+.fa-phone{
+    padding-left: 82px;
+}
+.fa-envelope{
+    margin: 12px;
+    margin-right: 4px;
+}
+.info{
+    font-family: 'Gotham';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+}
+.select{
+background-color: #FFE1A3;
+float: right;
+margin-right: 90px;
+border: 0px;
+height: 50px;
+
+}
+
+/* selelction of location end*/
+
+/*Navbar Section Start*/
+.navbar{
+    height: 100px;
+    width: 100%;
+    background-color: #FFE1A3;
+    overflow: hidden;
+    position: fixed;
+}
+.logo{
+    padding-left: 5%;
+}
+.list{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    align-items: flex-start;
+    margin: 12px 15px;
+   /* gap: 50px; */
+    font-weight: 500;
+    font-size: 20px;
+    color:black;
+    
+}
+.nav-link{
+    color: black;
+    margin-right: 50px;
+}
+/*curve section*/
+
+.bg-header
+{
+        background: transparent;
+        width: 100%;
+        height: 600px;
+      /*  border-bottom-left-radius: 173% 658px;
+        border-bottom-right-radius: 202% 1120px;*/
+        padding: 0;
+       
+}
+.call{
+    background-color: black;
+    padding: 9px 30px 10px 30px;
+font-size: 19px;
+border-radius: 5px 5px 10px 20px;
+border: 2px solid black;
+}
+#land1{
+    margin-left: 60px;
+}
+.moving{
+    font-size: 70px;
+    color: black;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: url('fonts/Gotham-Bold.eot');
+    line-height: 60px;
+}
+.regular{
+    color: black;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 22px;
+line-height: 26px;
+}
+.regular1{
+    color: black;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 26px;
+
+}
+.main-img{
+    width: 100%;
+}
+/*Discover your Relocation*/
+.discover{
+    height: 100px;
+    background-color: transparent;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    width: 100%;
+}
+.location{
+    font-size: 40px;
+    text-align: center;
+    font-family: url('fonts/Gotham-Bold.eot');
+    font-style:normal;
+}
+
+.box{
+    height: 300px;
+}
+.boxes{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+margin-left: 68px;
+}
+.boxes11{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+margin-left: 82px;
+}
+.boxes12{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+margin-left: 60px;
+}
+.box-int{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+margin-left: 44px;
+}
+/*box end   */
+
+.rectangle{
+    height: 400px;
+
+    background-color: white;
+}
+.main-rect{
+    height: 500px;
+    width: 325px;
+    background-color: white;
+}
+.qq{
+     background-color:white;
+     height: 100px;
+}
+.rect{
+width: 300px;
+height: 350px;
+left: 0px;
+top: 0px;
+background: #FDF1E0;
+border-radius: 10px 10px 0px 0px;
+}
+
+.rect-img{
+    width: 98%;
+}
+.local{
+
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+height: 100px;
+width: 100%;
+}
+/*covid*/
+.covid{
+    height: 200px;
+    background-color: transparent;
+    width: 100%;
+}
+.mask{
+   
+    height: 200px;
+    background-color: transparent;
+}
+.grp-mask{
+    border: 2px solid red;
+    justify-content: center;
+    background-color: wheat;
+}
+.grp-mask1{
+    float: right;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.mask-write{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: justify;
+
+color: black;
+}
+/*start accerrited*/
+.location1{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+/* identical to box height */
+
+text-align: justify;
+
+color: #BA3C21;
+
+}
+
+.pickNTrack{
+    margin-top: -10px;
+}
+.Enquiry{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20.5px 30px;
+gap: 10px;
+width: 250px;
+height: 60px;
+font-family: url('fonts/Gotham-Bold.eot');
+font-size: 20px;
+background: #2E2E2E;
+border-radius: 10px;
+
+}
+
+/*TOP*/
+
+.top-pick {  
+background: #FDF1E0;
+height: 350px;
+}
+.Top{
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+font-size: 40px;
+text-align: center;
+font-family: url('fonts/Gotham-Bold.eot');
+font-style:normal;
+color: #2E2E2E;
+margin-bottom: -60px;
+}
+#mfimovers{
+    color: #865A00;
+}
+
+.looking{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+
+color: #2E2E2E;
+}
+
+/*number box*/
+.grp57{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+
+}
+.grp58{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+margin-left: 68px;
+}
+
+/*scolll*/
+  /*Top start*/
+  #top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .main-scroll-div{
+    width: 90%;
+    height: 174%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .cover{
+    position: relative;
+    width: 90%;
+    height: 50%;
+  }
+  .cover::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 150px;
+  }
+  .cover::after{
+    position: absolute;
+    content: "";
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 150px;
+  }
+  .scroll-images{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+  }
+  .child{
+    width: 100%;
+    height: 220px;
+    margin: 1px 10px;
+    cursor: pointer;
+   
+    overflow: hidden;
+    border-radius: 9px;
+  }
+  .scroll-images::-webkit-scrollbar{
+    -webkit-appearance: none;
+  }
+  .child-img{
+    position: absolute;
+    width: 132.16px;
+    height: 209px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    position: absolute;
+  }
+  .child-img1{
+    position: absolute;
+    width: 132.16px;
+    height: 209px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 12%;
+    position: absolute;
+  }
+  .btn-icon{
+    color:black;
+     border: 1px solid #b6b4b4;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 35px;
+    background-color: white;
+    outline: none;
+    border: none;
+    margin-bottom: 80px;
+    cursor: pointer;
+  }
+  .btn-icon:hover{
+    color: darkgreen;
+  }
+  .star{
+    color: #b6b4b4;
+    text-align: center;
+    font-size: 14px;
+  }
+  #star{
+  color: orange;
+  }
+  #line-star{
+    height: 15px;
+  }
+  .com-name{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: justify;
+    margin-left: 10%;
+    color: #2E2E2E;
+    
+    position: absolute;
+    font-family: url('fonts/Gotham-Bold.eot');
+  }
+  
+  #group290{
+  
+    height: 35px;
+    width: 200px;
+    border: 2px solid #f0e9e9;
+    border-radius: 20px 20px 20px 20px;
+    border-color: #f0e9e9;
+    margin: auto;
+    cursor: pointer;
+  }
+  .top-space{
+    height: 50px;
+  }
+  .group235{
+    margin-top: 30px;
+    margin-left: 255%;
+    font-size: 50px;
+  }
+  .group236{
+    margin-top: 30px;
+    
+    font-size: 50px;
+  }
+
+  .name{
+    text-align: center;
+    font-family: url('fonts/Gotham-Bold.eot');
+
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+
+
+color: #808080;
+  }
+
+  /*footer*/
+  
+  .foot-box{
+    text-align: center;
+    margin-top: 45px;
+    margin-left: 0px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-left: 0px ;
+    background-color: #2E2E2E;
+    border-top: 0px ;
+    border-bottom: 0px ;
+    height: 300px;
+  }
+  .foot-box h4
+  {
+    color: #FFFFFF;
+    margin-top: 20px;
+  }
+  .foot-contact{
+    background-color:#2E2E2E;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    left: 0px;
+    height: 300px;
+    overflow: hidden;
+    
+    
+    }
+
+    .decoration{
+      text-decoration: none;
+      color: #B8B8B8;
+      gap: 30px;
+      font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 40px;
+    }
+    .line1{
+      width: 1px;
+      height: 174%;
+      margin: 10px 0px;
+      margin-right: 5px;
+      background-color: #999;
+  }
+    
+  /*msg*/
+  .contants{
+    height: 0px;
+  }
+  .search1{
+    
+    margin-right: 100px;
+    background: #FFFFFF;
+    border-radius: 35px;
+    border: none;
+    width: 130px;
+    
+    float: right;
+  }
+    #fafa{
+    color:  #6c5eee;
+    margin: 20px;
+    margin-left: auto;
+   text-align: center;
+    }
+    .search_in1 {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    
+    }
+    .search{
+      margin-left: -37px;
+      top: 10px;
+      margin-top: 10px;
+      height: 60px;
+    }
+                                      
+  .main{
+      background-color: #F7F9FC;
+  }
+  .mail{
+    height: 36px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+
+  .copy{
+    height: 50px;
+    width: 100%;
+    
+  }
+
+  /* POpup CSS */
+  .popup
+{
+  height: 815px;
+  width: 782px;
+  left: 329px;
+  top: 300px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index:2;
+}
+.popup h1
+{
+  margin-top:-20px;
+  margin-left: 20px;
+}
+.popupcities
+{
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  justify-content: space-evenly;
+  row-gap: 10px;
+  margin-top: 20px;
+  
+}
+.cities
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cities img
+{
+  
+  border: 1px solid white;
+  border-radius: 100%;
+  height: 130px;
+  width: 130px;
+}
+.cities h1
+{
+  margin-top: -40px;
+  font-family:Poppins;
+  font-size: 30px;
+  font-weight: 1000;
+  letter-spacing: 0em;
+  text-align: center;
+
+}
+.popsearch input
+{
+  margin: 10px;
+  width: 742px;
+  height: 60px;
+  background: #E4E4E4;
+  border-radius: 100px;
+  border: 1px none none;
+  margin-left: 15px;
+}
+.firstdivpop
+{
+  display:flex;
+   flex-direction: row;
+   margin-top: 30px;
+}
+.firstdivpop a
+{
+  text-decoration: none;
+  color: black;
+}
+/* Popup CSS Ends */
+.footer-foot
+{
+   background-color: #2E2E2E;
+    width: 1355px;
+   margin-left: -14px;
+   margin-top: 2px;
+   display: flex;
+   align-items: center;
+}
+.footer-foot-item
+{
+  margin-left: 100px;
+}
+.cprt
+{
+  margin-left: 320px;
+  margin-top: 10px;
+}
