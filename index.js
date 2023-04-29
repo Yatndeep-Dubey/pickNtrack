@@ -23,11 +23,11 @@ app.listen(port, () => {
  })
  app.get("/contact", function(req,res)
  {
-     res.render('contact')
+     res.render('contact',{message:false})
  })
  app.get("/about", function(req,res)
  {
-     res.render('about')
+     res.render('about',{message:false})
  })
  app.get('/privacy', function(req,res)
  {
@@ -52,7 +52,7 @@ app.post('/contact', async function(req,res)
     try
     {
         const singlecontact = await singleusercontact.save();
-        res.send(singlecontact);
+        res.render('contact',{message:true})
     }
     catch(error)
     {
@@ -73,7 +73,7 @@ app.post('/about', async function(req,res)
     try
     {
         const singleenqmodel = await singleenquiry.save();
-        res.send(singleenqmodel);
+        res.render('about',{message:true})
     }
     catch(error)
     {

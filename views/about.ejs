@@ -1,4 +1,5 @@
 <%-include('partials/header')-%>
+
     <!--Main Section of About Page-->
     <div class="mainsection">
        <div class="mainsectiontext">
@@ -91,6 +92,9 @@
          packers and movers charges, rate list, cost estimation, transit travel time, Best packers and movers surveys for your shifting.
      </p>
 </div>
+<!--Thanks Pop UP-->
+<%-include('partials/thankspopup')-%>
+<!--Thankspopup ends-->
 <!--Third Section    -->
 
 <div class="thirdsection">
@@ -156,6 +160,11 @@
 
 </div>
 <script>
+    var thankspopupstatus = '<%=message%>';
+    if(thankspopupstatus=='false')
+    {
+        document.getElementById('thankspopup').style.display='none'
+    }
     document.getElementById('openform').addEventListener('click', function()
     {
         document.getElementById('aboutpopupform').style.display='block'
@@ -164,6 +173,10 @@
     {
         document.getElementById('aboutpopupform').style.display='none'
     })
+     document.getElementById('closethankspopup').addEventListener('click',function()
+     {
+        document.getElementById('thankspopup').style.display='none'
+     })
     
 </script>
 <%-include('partials/footer')-%>
