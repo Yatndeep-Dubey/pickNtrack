@@ -119,7 +119,7 @@ color: #BA3C21;
 {
     position: absolute;
     width: 1200px;
-    height: 733px;
+    height: 700px;
     left:100px;
     top: 1500px;
     background: #F2F2F2;
@@ -155,12 +155,16 @@ color: #BA3C21;
     font-style:normal;
 }
 
-.name{
+.about-name{
     font-family: "Poppins";
-font-style: "Medium";
-font-size: 15px;
-line-height: 27px;
-
+    font-style: "Medium";
+    font-size: 15px;
+    line-height: 20px;
+}
+.about-form-inputs
+{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .place{
     height: 50px;
@@ -170,11 +174,14 @@ line-height: 27px;
     background-color:  #E4E4E4;
 
 }
-.submit{
-    background-color: black;
-    padding: 9px 30px 10px 30px;
-    font-size: 19px;
-    border-radius:20%;
-    border: 2px solid black;
-    width: 20%;
+.about-submit{
+   
+justify-content: center;
+align-items: center;
+padding: 12px 47px;
+width: 182px;
+height: 60px;
+background: #2E2E2E;
+border-radius: 100px;
+color: #F2F2F2;
 }

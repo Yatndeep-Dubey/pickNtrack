@@ -200,11 +200,16 @@ font-size: 30px;
 }
 
 .contact-name{
-    font-family: "Poppins";
-font-style: "Medium";
-font-size: 15px;
-line-height: 27px;
+    font-family: 'Poppins';
+    font-style: "Medium";
+    font-size: 15px;
+    line-height: 27px;
+    margin-left: 10px;
+}
+.form-inputs
 
+{
+    margin-top: -20px;
 }
 .place{
     height: 50px;
@@ -212,15 +217,24 @@ line-height: 27px;
     border: 2px solid transparent;
     border-radius: 25px;
     background-color:  #E4E4E4;
-
 }
 .submit{
     background-color: black;
     padding: 9px 30px 10px 30px;
-font-size: 19px;
-border-radius:20%;
-border: 2px solid black;
-width: 20%;
+    font-size: 19px;
+    border-radius:20%;
+    border: 2px solid black;
+    width: 20%;
 }
+.contact-form-heading
+{
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 10px;
 
+}
 /*footer*/
