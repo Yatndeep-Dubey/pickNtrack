@@ -1,3 +1,5 @@
+
+
 .mainsection
 {
     margin-top: 250px;
@@ -11,14 +13,14 @@
 }
 .mainsectiontitle h1
 {
-    font-family: 'Gotham';
+    font-family:  url('fonts/Gotham-Bold.eot');
     font-style: normal;
     font-weight: 900;
     font-size: 50px;
     line-height: 60px;
 }
 .mainsectionsecondtitle h1 {
-    font-family: 'Mont';
+    font-family:'Montserrat';
 font-style: normal;
 font-weight: 700;
 font-size: 30px;
@@ -45,7 +47,7 @@ color: #BA3C21;
 }
 .secondsection p
 {
-    font-family: 'Mont';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -63,7 +65,7 @@ color: #BA3C21;
 }
 .thirdsection p
 {
-    font-family: 'Mont';
+    font-family:  'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -97,7 +99,7 @@ color: #BA3C21;
 }
 .numbersection-first h1
 {
-        font-family: 'Mont';
+        font-family:  'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
@@ -106,7 +108,7 @@ color: #BA3C21;
 }
 .numbersection-first p
 {
-    font-family: 'Mont';
+    font-family:  'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;

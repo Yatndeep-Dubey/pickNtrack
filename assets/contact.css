@@ -163,7 +163,7 @@ font-size: 30px;
 }
 
 /*Get In Touch*/
-.discover{
+.contact-discover{
     height: 100px;
     background-color: transparent;
     font-size: 30px;
@@ -199,7 +199,7 @@ font-size: 30px;
     font-style:normal;
 }
 
-.name{
+.contact-name{
     font-family: "Poppins";
 font-style: "Medium";
 font-size: 15px;
