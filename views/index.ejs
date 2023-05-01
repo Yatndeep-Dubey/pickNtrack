@@ -1,61 +1,63 @@
 <%-include('partials/header')-%>
 <link rel="stylesheet" href="../assets/home.css">
-  <!--NAV END-->
-  <!--Popup Page -->
-  <div class="popup" id="popuppage">
-    <div>
-      <div class="firstdivpop">
-        <h1>Select Your City</h1>
-        <a href="#" id="closePopup">
-          <h1 style="margin-left: 350px;">X</h1>
-        </a>
-      </div>
-      <div class="popsearch">
-        <input type="text">
-      </div>
+ <!--Popup Page -->
+ <div class="popup" id="popuppage">
+  <div>
+    <div class="firstdivpop">
+      <h1>Select Your City</h1>
+      <a href="#" id="closePopup">
+        <h1 style="margin-left: 350px;">X</h1>
+      </a>
     </div>
-
-    <div class="popupcities">
-      <div class="cities">
-        <img src="images/mumbai.jfif" alt=""> <br><br>
-        <h1><a>Delhi</a></h1>
-      </div>
-      <div class="cities">
-        <img src="images/mumbaicity.jfif" alt=""> <br><br>
-        <h1><a>Mumbai</a></h1>
-      </div>
-      <div class="cities">
-        <img src="images/banglore.jfif" alt=""> <br><br>
-        <h1><a>Bangalore</a></h1>
-      </div>
-      <div class="cities">
-        <img src="images/chennai.jfif" alt=""> <br><br>
-        <h1><a>Chennai</a></h1>
-      </div>
-      <div class="cities">
-        <img src="images/kolkata.jfif" alt=""> <br><br>
-        <h1><a>Kolkata</a></h1>
-      </div>
-      <div class="cities">
-        <img src="images/hyderabad.jfif" alt=""> <br><br>
-        <h1><a>Hyderabad</a></h1>
-      </div>
-      <div class="cities">
-        <img src="images/ranchi.jfif" alt=""> <br><br>
-        <h1><a>Ranchi</a></h1>
-      </div>
-      <div class="cities">
-        <img src="images/pune.jfif" alt=""> <br><br>
-        <h1><a>Pune</a></h1>
-      </div>
-      <div class="cities">
-        <img src="images/ahmedabad.jfif" alt=""> <br><br>
-        <h1><a>Ahmedabad</a></h1>
-      </div>
+    <div class="popsearch">
+      <input type="text">
     </div>
   </div>
 
-  <!--PopUp End-->
+  <div class="popupcities">
+    <div class="cities">
+      <img src="images/mumbai.jfif" alt=""> <br><br>
+      <h1><a>Delhi</a></h1>
+    </div>
+    <div class="cities">
+      <img src="images/mumbaicity.jfif" alt=""> <br><br>
+      <h1><a>Mumbai</a></h1>
+    </div>
+    <div class="cities">
+      <img src="images/banglore.jfif" alt=""> <br><br>
+      <h1><a>Bangalore</a></h1>
+    </div>
+    <div class="cities">
+      <img src="images/chennai.jfif" alt=""> <br><br>
+      <h1><a>Chennai</a></h1>
+    </div>
+    <div class="cities">
+      <img src="images/kolkata.jfif" alt=""> <br><br>
+      <h1><a>Kolkata</a></h1>
+    </div>
+    <div class="cities">
+      <img src="images/hyderabad.jfif" alt=""> <br><br>
+      <h1><a>Hyderabad</a></h1>
+    </div>
+    <div class="cities">
+      <img src="images/ranchi.jfif" alt=""> <br><br>
+      <h1><a>Ranchi</a></h1>
+    </div>
+    <div class="cities">
+      <img src="images/pune.jfif" alt=""> <br><br>
+      <h1><a>Pune</a></h1>
+    </div>
+    <div class="cities">
+      <img src="images/ahmedabad.jfif" alt=""> <br><br>
+      <h1><a>Ahmedabad</a></h1>
+    </div>
+  </div>
+</div>
+
+<!--PopUp End-->
+<body id="bodybackground">
+  <!--NAV END-->
+ 
 
   <div class="container-fluid">
     <div style="height: 150px; background-color:white; width:100%"></div>
@@ -138,7 +140,7 @@
         <div class="col-md-3 col-lg-3 rect"><br><br>
           <img class="rect-img" src="images/Group 39.png" alt=""> <br><br> <br><br><br>
           <div class="qq"> <center class="mov"><br > Moving <br></center>
-            <small class="local"><br> Local Movers • Domestic Movers • Top Relocation Companies • Relocation Deals & Discounts
+            <small class="local"><br> Local Movers • Domestic Movers • Top Relocation Companies • Relocation <br> Deals & Discounts
             </small>
           </div>
         </div>
@@ -148,7 +150,7 @@
         <div class="col-md-3 col-lg-3 rect"><br><br>
           <img class="rect-img1" src="images/g12.png" alt=""> <br><br>
           <div class="qq">  <center class="mov"><br > Planning <br></center>
-            <small class="local"><br> Checklist • Easy packing • Way to Buy Packing Materials • Relocation Paper Work Explain
+            <small class="local"><br> Checklist • Easy packing <br> •Way to Buy Packing Materials • Relocation Paper Work Explain
             </small>
           </div>
         </div>
@@ -255,7 +257,7 @@
 
       <div class="col-md-1"></div>
 
-      <div class="col-md-10 looking"> Looking for relocation companies in your area? Check out our #mfimovers hubwhere
+      <div class="col-md-11 looking"> Looking for relocation companies in your area? Check out our #mfimovers hubwhere
         we've vetted the top relocation <br> companies in major cities and states across India. <br>
         Explore top movers inn:- Ahmedabad | Bangalore | Chandigarh | Delhi/NCR | Kolkata | Mumbai | Pune...
       </div>
@@ -378,8 +380,9 @@
   }
   function prt() {
     document.getElementById('popuppage').style.display = 'block';
+
   }
-  setTimeout(prt, 3000);
+  setTimeout(prt, 000);
   document.getElementById("closePopup")
     .addEventListener("click", function () {
       document.getElementById('popuppage').style.display = 'none';

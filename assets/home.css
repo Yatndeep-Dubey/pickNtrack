@@ -213,8 +213,14 @@ margin-left: 33px;
   background-color: white;
 }
 .qq{
-   background-color:white;
-   height: 100px;
+  height: 200px;
+  box-shadow: -15px 0px 40px rgba(0, 0, 0, 0.04), 15px 15px 40px rgba(0, 0, 0, 0.04);
+  width: inherit;
+  margin-left: -14px;
+  margin-top: -20px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .rect{
 width: 300px;
@@ -247,7 +253,7 @@ color: #2E2E2E;
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 20px;
+font-size: 19px;
 line-height: 26px;
 text-align: center;
 height: 100px;
@@ -346,7 +352,6 @@ font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 26px;
-
 color: #2E2E2E;
 }
 
@@ -584,13 +589,16 @@ line-height: 40px;
 }
 .search1{
   
-  margin-right: 100px;
+  margin-right: 80px;
   background: #FFFFFF;
   border-radius: 35px;
   border: none;
-  width: 150px;
+  width: 250px;
   
-  float: right;
+}
+.se
+{
+  margin-left:40px;
 }
   #fafa{
   color:  #6c5eee;
@@ -658,7 +666,7 @@ color: white;
 font-size: 23px;
 }
 .arrow{
-margin-left: 215px;
+margin-left: 261px;
 margin-top: -69px;
 margin-right: 15%;
 }
@@ -682,14 +690,25 @@ margin-right: 100px;
 padding-left: 150px;
 }
 .fafa-apple{
-font-size: 30px;
+font-size: 45px;
 text-decoration: none;
 color: white;
 font-size: 23px;
+
 }
 .siteplay{
 margin-left: 40px;
 cursor: pointer;
+width: 30px;
+height: 30px;
+}
+.siteplayapple
+{
+  cursor: pointer;
+  margin-left: 5px;
+  margin-bottom: 3px;
+  width: 25px;
+  height: 30px;
 }
 .playline{
 width: 108%;

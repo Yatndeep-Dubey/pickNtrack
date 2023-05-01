@@ -79,7 +79,7 @@ color: #BA3C21;
     margin-left: 100px;
     border-radius: 10px;
     background-color: black;
-    margin-top: 60px;
+    margin-top: 70px;
     color: white;
 }
 .numbersection
@@ -89,7 +89,7 @@ color: #BA3C21;
     flex-direction: row;
     align-items: center;
     margin-left: 100px;
-    margin-top: 60px;
+    margin-top: 100px;
     text-align: center;
     justify-content: space-between;
 }
@@ -99,7 +99,7 @@ color: #BA3C21;
 }
 .numbersection-first h1
 {
-        font-family:  'Montserrat';
+     font-family:  'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
@@ -111,16 +111,17 @@ color: #BA3C21;
     font-family:  'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 28px;
     text-align: center;
+    margin-top: 30px;
 }
 .popupform
 {
     position: absolute;
-    width: 1200px;
-    height: 700px;
-    left:100px;
+    width: 800px;
+    height: 590px;
+    left:300px;
     top: 1500px;
     background: #F2F2F2;
     border-radius: 10px;
@@ -134,7 +135,7 @@ color: #BA3C21;
 }
 .firstdivpopform h1
 {
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 20px;
 }
 .firstdivpopform a
@@ -143,7 +144,7 @@ color: #BA3C21;
     text-decoration: none;
 }
 .form{
-    height: 750px ;
+    height: 500px ;
     border: 2px solid #F2F2F2;
     border-radius: 15px;
     background: #f5f3f3;
@@ -160,27 +161,26 @@ color: #BA3C21;
     font-style: "Medium";
     font-size: 15px;
     line-height: 20px;
+    margin-bottom: 10px;
 }
 .about-form-inputs
 {
-    margin-left: 20px;
+    margin-left: 30px;
     margin-right: 20px;
 }
 .place{
-    height: 50px;
-    width: 100%;
+    height: 40px;
+    width: 95%;
     border: 2px solid transparent;
     border-radius: 25px;
     background-color:  #E4E4E4;
 
 }
 .about-submit{
-   
 justify-content: center;
 align-items: center;
-padding: 12px 47px;
-width: 182px;
-height: 60px;
+width: 102px;
+height: 40px;
 background: #2E2E2E;
 border-radius: 100px;
 color: #F2F2F2;
