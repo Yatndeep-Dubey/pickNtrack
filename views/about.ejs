@@ -281,7 +281,7 @@
            
       <div class="row  lg:w-[100%]  bg-gray-100  rounded-lg shadow px-4 dark:bg-gray-800 dark:border-gray-700 " id="enquirypopuppart1">
       
-        <form class="space-y-6 bg-gray-100  " action="#" id="enquirypopuppart2">
+        <form class="space-y-6 bg-gray-100  " action="#" id="enquirypopuppart2" method="post">
             <div class=" text-gray-900 dark:text-white flex flex-row py-[20px] ">
               <h1 class="text-black bold text-xl">Please fill in below form fields and send us your Enquiry.</h1>
               <h1 class="lg:ml-[35%] text-black bold text-2xl cursor-pointer" id="closeenquirypopup">X</h1>
@@ -300,15 +300,15 @@
             <label for="email" class="block mb-2 text-lg text-black bold ">Phone Number*</label>
       
       <div class="grid grid-cols-11 gap-3">
-        <select class=" ... place bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5">
-          <option>+91</option>
-          <option value="1">+31</option>
-          <option value="2">+02</option>
-          <option value="3">+15</option>
+        <select class=" ... place bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5" name="countrycode">
+          <option value="+91">+91</option>
+          <option value="+31">+31</option>
+          <option value="+02">+02</option>
+          <option value="+15">+15</option>
       </select>
       
       <div class="col-span-10">
-            <input type="name" name="name" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required> 
+            <input type="name" name="phone" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required> 
       </div>
       </div></div>
         <div>
@@ -316,21 +316,10 @@
           <input type="name" name="location" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
       </div>
       
-      <div>
-        <label for="email" class="block mb-2 text-lg text-black bold ">Query*</label>
-       
-        <select  class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 ">           
-          <option class="choose"> Choose the Query Type</option>
-          <option value="1">Business Inquiry</option>
-          <option value="2">Complaint </option>
-          <option value="3">Suggestion </option>
-          <option value="3">Feedback</option>
-          <option value="3"> Career </option>
-      </select>
-      </div>
+      
       <div>
         <label for="msgg" class="block mb-2 text-lg text-black bold ">Message*</label>
-        <input type="name" name="msg" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
+        <input type="name" name="message" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
       </div>
       
       <button class="bg-black text-white font-bold text-xl py-2 px-10 rounded-full">Submit</button>
@@ -353,7 +342,7 @@
 
       <!-- header section -->
 <%-include('partials/header')-%>
-
+<%-include('partials/thankspopup')-%>
       <!--Navbar Ends-->
       <div class="mainsection w-full">
             <div class="mainsectiontext">
@@ -393,6 +382,8 @@
    <b>
      <h1 class="text-bold lg:text-5xl text-3xl">Mission</h1>
    </b>
+     <br>
+     <br>
      <br>
      <p>
          At the core of our way of life
@@ -677,6 +668,20 @@ const faqpopup = document.getElementById('faqpopup')
         struct.style.opacity='0.2'
         struct.style.pointerEvents='none'
     } 
+    // thanks popup
+    //closethankspopup
+     document.getElementById('closethankspopup').addEventListener('click',closethankspopup)
+     document.getElementById('closemobthankspopup').addEventListener('click',closethankspopup)
+     function closethankspopup()
+     {
+        document.getElementById('thankspopup').style.display='none'
+     }
+     // open thankspopoup
+      const thanksmessage = '<%=message%>'
+      if(thanksmessage=='true')
+      {
+        document.getElementById('thankspopup').style.display='flex'
+      }
  </script>
  </html>
 

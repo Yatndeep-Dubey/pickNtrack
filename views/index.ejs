@@ -46,7 +46,7 @@
   height: 550px;
   width: 580px;
   left: 30%;
-  top: 50px;
+  top: 30px;
   border-radius: 10px;
   position: absolute;
   background-color:aliceblue;
@@ -240,8 +240,8 @@
       /* The dots/bullets/indicators */
       .dot {
         cursor: pointer;
-        height: 15px;
-        width: 15px;
+        height: 10px;
+        width: 10px;
         margin: 0 2px;
         background-color: #bbb;
         border-radius: 50%;
@@ -337,13 +337,13 @@
  <div class="popup" id="popuppage">
     <div>
       <div class="firstdivpop">
-        <h1>Select Your City</h1>
+        <h1 class="pl-[3px]"><b>Select Your City</b></h1>
         <a href="#" id="closePopup">
           <h1>X</h1>
         </a>
       </div>
       <div class="popsearch">
-        <input type="text" id="searchbar" onkeyup="search_cities()">
+        <input type="text" id="searchbar" placeholder="Search City to select" class="pl-[10px]" onkeyup="search_cities()">
       </div>
     </div>
   
@@ -400,7 +400,7 @@
         alt="hero section image"
         class="h-64 w-64 mx-auto md:mx-0 md:h-96 md:w-96 lg:h-[30rem] lg:w-[30rem]"
       />
-      <div class="text-center space-y-5 p-2 md:text-left lg:max-w-lg lg:mx-24">
+      <div class="text-center space-y-5 p-2 md:text-left lg:max-w-lg lg:mx-24 ">
         <p class="font-bold text-3xl md:font-extrabold md:text-4xl lg:text-6xl">
           Let's Get You Moving!
         </p>
@@ -414,7 +414,7 @@
         </p>
         <a href="/contact">
         <button
-          class="bg-blackish text-white px-3 py-2 rounded-xl md:text-xl lg:text-2xl"
+          class="bg-blackish text-white px-3 py-2 lg:p-4 rounded-xl md:text-xl lg:text-xl mt-[20px] "
         >
           Schedule A Call
         </button>
@@ -433,21 +433,21 @@
       <div
         class="grid mx-auto w-fit gap-10 p-5 sm:grid-cols-2 md:grid-cols-4 lg:text-lg lg:p-10"
       >
-        <div class="flex flex-col items-center gap-3">
+        <div class="flex flex-col items-center gap-5">
           <img src="public/images/local-move-logo.svg" alt="local move" />
-          <p>Local Move</p>
+          <p class="text-center">Local<br> Move</p>
         </div>
-        <div class="flex flex-col items-center gap-3">
+        <div class="flex flex-col items-center gap-5">
           <img src="public/images/domestic-move-logo.svg" alt="domestic move" />
-          <p>Domestic Move</p>
+          <p class="text-center">Domestic<br> Move</p>
         </div>
-        <div class="flex flex-col items-center gap-3">
+        <div class="flex flex-col items-center gap-5">
           <img src="public/images/local-move-logo.svg" alt="International Move" />
-          <p>International Move</p>
+          <p class="text-center">International<br> Move</p>
         </div>
-        <div class="flex flex-col items-center gap-3">
+        <div class="flex flex-col items-center gap-5 w-full ">
           <img src="public/images/wct-logo.svg" alt="Warehouse & Car Transportation" />
-          <p>Warehouse & Car Transportation</p>
+          <p class="text-center">Warehouse & Car Transportation</p>
         </div>
       </div>
     </div>
@@ -459,20 +459,20 @@
       >
         Get ready to plan your route to your new city!
       </p>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3">
-        <div class="shadow w-64 mx-auto rounded-lg my-10">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:px-24">
+        <div class="shadow w-72 mx-auto rounded-lg my-10">
           <div class="bg-yellow-light w-full rounded-t-lg px-5 p-10">
             <img src="public/images/moving.svg" alt="moving logo" class="h-44" />
           </div>
           <div class="space-y-2 p-5 text-center">
-            <p class="font-bold">Moving</p>
-            <p>
+            <p class="font-extrabold text-lg">Moving</p>
+            <p class="font-bold">
               Local Movers • Domestic Movers • Top Relocation Companies •
               Relocation Deals & Discounts
             </p>
           </div>
         </div>
-        <div class="shadow w-64 mx-auto rounded-lg my-10">
+        <div class="shadow w-72 mx-auto rounded-lg my-10">
           <div class="bg-yellow-light w-full rounded-t-lg px-5 p-10">
             <img
               src="public/images/planning-logo.svg"
@@ -481,14 +481,14 @@
             />
           </div>
           <div class="space-y-2 p-5 text-center">
-            <p class="font-bold">Planning</p>
-            <p>
+            <p class="font-extrabold text-lg">Planning</p>
+            <p class="font-bold">
               Checklist • Easy packing • Way to Buy Packing Materials •
               Relocation Paper Work Explain
             </p>
           </div>
         </div>
-        <div class="shadow w-64 mx-auto rounded-lg my-10">
+        <div class="shadow w-72 mx-auto rounded-lg my-10">
           <div class="bg-yellow-light w-full rounded-t-lg px-5 p-10">
             <img
               src="public/images/deciding-home-logo.svg"
@@ -497,8 +497,8 @@
             />
           </div>
           <div class="space-y-2 p-5 text-center">
-            <p class="font-bold">Deciding Home</p>
-            <p>
+            <p class="font-extrabold text-lg">Deciding Home</p>
+            <p class="font-bold">
               Utility & Handyman Services • Most Expensive Cities • Sunniest
               Cities in India • Lowest Cost of Living by Cities
             </p>
@@ -570,7 +570,7 @@
       >
       <a href="/about">
         <button
-          class="bg-blackish text-white px-3 py-2 rounded-xl md:text-xl lg:text-2xl"
+          class="bg-blackish text-white px-3 py-2 rounded-xl md:text-xl lg:text-xl"
         >
           Quick Enquiry
         </button>
@@ -579,14 +579,14 @@
     </div>
 
     <!-- mfimovers sections -->
-    <div class="bg-yellow-light p-10 space-y-5 lg:space-y-10 lg:p-16">
+    <div class="bg-yellow-light p-10 space-y-5 lg:space-y-10 lg:p-16 lg:mt-24">
       <p
-        class="text-center text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl lg:max-w-6xl mx-auto lg:text-lg"
+        class="text-center text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl lg:max-w-6xl mx-auto lg:text-2xl"
       >
         Top <span class="text-[#865a00] font-extrabold">#mfimovers</span> in the
         country
       </p>
-      <p class="text-justify lg:max-w-6xl mx-auto lg:text-lg">
+      <p class=" lg:max-w-6xl mx-auto lg:text-lg">
         Looking for relocation companies in your area? Check out our #mfimovers
         hubwhere we've vetted the top relocation companies in major cities and
         states across India. <br />
@@ -613,7 +613,7 @@
             <img src="public/images/1.svg" alt="1 logo" class="-mt-36 -ml-16 w-16" />
           </div>
 
-          <p class="font-bold">Share your Shifting Requirement</p>
+          <p class="font-bold ">Share your Shifting Requirement</p>
         </div>
 
         <div class="flex flex-col items-center justify-center gap-5 m-3">
@@ -658,15 +658,21 @@
     </div>
 
     <!-- customer reviews section -->
+    <div class="mb-16">
+      <p
+        class="text-center text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl mb-16"
+      >
+        What Our Customers Say About Us!
+      </p>
     <div class="slideshow-container">
         <img
           src="public/images/quotes.svg"
           alt="quotes logo"
-          class="absolute -z-10 w-24"
+          class="absolute -z-10 w-56"
         />
         <div class="mySlides fade">
           <p class="text-[#808080] text-center my-5">Ayanjyoti Chakrabarti</p>
-          <p class="text-xs text-justify mx-10">
+          <p class="text-xs lg:text-base text-justify mx-10 lg:mx-24">
             I had used the service of MFI's Pick N Track - Bangalore for my
             house shifting. They delivered timely service. Took care of my
             movement requirements end-end. Needed no or minimum supervision.
@@ -679,8 +685,8 @@
         </div>
 
         <div class="mySlides fade">
-          <p class="text-[#808080] text-center my-5">Rachit Bhardwaz</p>
-          <p class="text-xs text-justify mx-10">
+          <p class="text-[#808080] text-center my-5">Rachit Bhardwaj</p>
+          <p class="text-xs lg:text-base text-justify mx-10 lg:mx-24">
             I had used the service of MFI's Pick N Track - Bangalore for my
             house shifting. They delivered timely service. Took care of my
             movement requirements end-end. Needed no or minimum supervision.
@@ -694,7 +700,20 @@
 
         <div class="mySlides fade">
           <p class="text-[#808080] text-center my-5">Yatndeep Dubey</p>
-          <p class="text-xs text-justify mx-10">
+          <p class="text-xs lg:text-base text-justify mx-10 lg:mx-24">
+            I had used the service of MFI's Pick N Track - Bangalore for my
+            house shifting. They delivered timely service. Took care of my
+            movement requirements end-end. Needed no or minimum supervision.
+            Packing material used were of high standard, resulting no damage
+            delivery. My requirement had the complexity of moving big articles
+            through stairs to 8th floor, which was handled very efficiently.In
+            summary, I was fully satisfied with the service received and would
+            recommend others.
+          </p>
+        </div>
+        <div class="mySlides fade">
+          <p class="text-[#808080] text-center my-5">Somani Keshari Mam</p>
+          <p class="text-xs lg:text-base text-justify mx-10 lg:mx-24">
             I had used the service of MFI's Pick N Track - Bangalore for my
             house shifting. They delivered timely service. Took care of my
             movement requirements end-end. Needed no or minimum supervision.
@@ -720,12 +739,12 @@
       <br />
 
       <div style="text-align: center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot " onclick="currentSlide(1)"></span>
+        <span class="dot " onclick="currentSlide(2)"></span>
+        <span class="dot " onclick="currentSlide(3)"></span>
       </div>
     </div>
-
+  </div>
 
     <!-- footer -->
      

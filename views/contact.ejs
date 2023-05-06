@@ -112,8 +112,10 @@
     }
     .mainsectiontitle h1
     {
-         font-size: 30px;
-         font-weight: 900;
+      font-family:url('fonts/Gotham-Bold.eot');
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 60px;
          
     }
     .mainsectiontext
@@ -141,8 +143,10 @@
 <%-include('partials/privacy')-%>
 <%-include('partials/tandc')-%>
 <%-include('partials/faq')-%>
+<%-include('partials/thankspopup')-%>
     <!-- header section -->
 <%-include('partials/header')-%>
+
       <!--contact Us img-->
       <div class="mainsection w-full">
         <div class="mainsectiontext">
@@ -168,20 +172,20 @@
 <div class="contact-cards">
    <!--1111111111111111111111111111111111111-->  
         <div>
-              <div class="flex flex-wrap ">
-                    <div class=" lg:w-1/3 "> 
-                              <div class="flex justify-center">
-                                <img src="public/images/Group 289.png" alt="" class="">
-                              </div>
-                              <div class=" -mt-10 overflow-hidden con-card">
-                              
-                                          <div class="">
-                                                
-                                              <h1 class="font-semibold mb-3 text-3xl text-black text-center"><br><br> Our Address </h1> <br>
-                                              <p class="leading-relaxed mb-3 text-xl font-bold  text-center text-black con-ca">
-                                                118 Singanayakanahalli <br> Yelahanka Hobli Bangalore <br> North, near Navachethana <br> School, Bangalore,<br> Karnataka-560064, India</p>  
-                                          </div>
-                              </div>
+              <div class="flex flex-wrap  ">
+                    <div class=" lg:w-1/3  "> 
+                                        <div class="flex  ">
+                                          <img src="public/images/Group 289.png" alt="" class="">
+                                        </div>
+                                  <div class=" -mt-10 overflow-hidden con-card">
+            
+                                              <div class="">
+                                                    
+                                                  <h1 class="font-semibold mb-3 text-3xl text-black text-center"><br><br> Our Address </h1> <br>
+                                                  <p class="leading-relaxed mb-3 text-xl font-bold  text-center text-black con-ca">
+                                                    118 Singanayakanahalli <br> Yelahanka Hobli Bangalore <br> North, near Navachethana <br> School, Bangalore,<br> Karnataka-560064, India</p>  
+                                              </div>
+                                  </div>
                     </div>
               </div>
         </div> 
@@ -236,7 +240,7 @@
      
 <div class="row  w-[100%]  bg-gray-100  rounded-lg shadow px-4 dark:bg-gray-800 dark:border-gray-700">
 
-  <form class="space-y-6 bg-gray-100 " action="#">
+  <form class="space-y-6 bg-gray-100 " action="#" method="post">
       <div class="text-2xl  font-medium font-poppins font-semibold text-gray-900 dark:text-white">Contact Us</div>
       <div>
           <label for="name" class="block mb-2 text-lg text-black bold ">Name*</label>
@@ -253,14 +257,14 @@
 
 <div class="grid grid-cols-11 gap-3">
   <select class=" ... place bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5">
-    <option>+91</option>
-    <option value="1">+31</option>
-    <option value="2">+02</option>
-    <option value="3">+15</option>
+    <option value="+91">+91</option>
+    <option value="+31">+31</option>
+    <option value="+02">+02</option>
+    <option value="+15">+15</option>
 </select>
 
 <div class="col-span-10">
-      <input type="name" name="name" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required> 
+      <input type="tel" name="phone" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required> 
 </div>
 </div></div>
   <div>
@@ -271,21 +275,21 @@
 <div>
   <label for="email" class="block mb-2 text-lg text-black bold ">Query*</label>
  
-  <select  class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 ">           
+  <select  class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " name="query">           
     <option class="choose"> Choose the Query Type</option>
-    <option value="1">Business Inquiry</option>
-    <option value="2">Complaint </option>
-    <option value="3">Suggestion </option>
-    <option value="3">Feedback</option>
-    <option value="3"> Career </option>
+    <option value="Business Enquiry">Business Enquiry</option>
+    <option value="Complaint">Complaint </option>
+    <option value="Suggestion">Suggestion </option>
+    <option value="Feedback">Feedback</option>
+    <option value="Career"> Career </option>
 </select>
 </div>
 <div>
   <label for="msgg" class="block mb-2 text-lg text-black bold ">Message*</label>
-  <input type="name" name="msg" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
+  <input type="name" name="message" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
 </div>
 
-<button class="bg-black text-white font-bold text-xl py-2 px-10 rounded-full">Submit</button>
+<button class="bg-black text-white font-bold text-xl py-2 px-10 rounded-full" type="submit">Submit</button>
 
       <div class="flex items-start">
           <div class="flex items-start">
@@ -436,6 +440,24 @@ const faqpopup = document.getElementById('faqpopup')
         var struct=document.getElementById('struct');
         struct.style.opacity='0.2'
         struct.style.pointerEvents='none'
-    }         
+    } 
+    document.getElementById('closethankspopup').addEventListener('click',closethankspopup)
+     document.getElementById('closemobthankspopup').addEventListener('click',closethankspopup)
+     function closethankspopup()
+     {
+        document.getElementById('thankspopup').style.display='none'
+        const struct=document.getElementById('struct');
+        struct.style.opacity='1'
+        struct.style.pointerEvents='auto'
+     }
+     // open thankspopoup
+      const thanksmessage = '<%=message%>'
+      if(thanksmessage=='true')
+      {
+        document.getElementById('thankspopup').style.display='flex'
+        const struct=document.getElementById('struct');
+        struct.style.opacity='0.2'
+        struct.style.pointerEvents='none'
+      }        
   </script>
 </html>
