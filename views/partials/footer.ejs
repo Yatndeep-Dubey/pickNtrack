@@ -36,18 +36,21 @@
         <p class="text-[#b8b8b8] text-sm">
           Want to receive amazing updates from Pick’N Track?
         </p>
-        <div
+        <form
           class="flex justify-between items-center bg-white rounded-full my-10 px-5"
+          method="post"
         >
           <img src="public/images/email-footer.png" alt="email logo" class="h-5" />
           <input
-            type="text"
+            type="email"
             placeholder="Enter Your Email"
             class="bg-transparent w-[100%]  focus:outline-none text-black px-2"
-            
+            name="email"
+            required
           />
-          <p  style="font-weight: bolder; color: black; font-size: x-large;" class="mb-[2px]">&rarr;</p>
-        </div>
+
+          <p  style="font-weight: bolder; color: black; font-size: x-large;" class="mb-[2px]"><button type="submit">&rarr;</button></p>
+        </form>
       </div>
       <div class="p-10">
         <p class="text-sm">Pick N Track App coming Soon On Google Play & Apple Store</p>
@@ -159,12 +162,11 @@
             <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-white">Want to receive amazing updates <br> from Pick’N Track?</a>
           </li>
           
-          <div class="flex h-12 w-full justify-between items-center bg-slate-200 rounded-full  my-10">
+          <form class="flex h-12 w-full justify-between items-center bg-slate-200 rounded-full  my-10" method="post">
           <img src="public/images/email-logo.png" alt="email logo" class="h-5 ml-[10px] " />
-          <input type="text" placeholder="Enter your email " class="bg-transparent w-[100%] mr-[12px] focus:outline-none mx-5"  />
-          <p class="text-black text-xl mr-5">&rarr;</p>
-      
-          </div>
+          <input type="email" placeholder="Enter your email " name="email" class="bg-transparent w-[100%] mr-[12px] focus:outline-none mx-5" required />
+          <p class="text-black text-xl mr-5"><button type="submit">&rarr;</button></p>
+          </form>
 
 <hr>
          <p class="text-white">  <br>  Pick N Track App coming Soon On Google Play & Apple Store </p> <br>
@@ -219,3 +221,15 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> 
+<script>
+  const message = '<%=message%>'
+if(message=='swal')
+{
+  swal({  
+              title: "Thanks",  
+              text: "You are now subscribed with us",   
+            }); 
+}
+
+</script>

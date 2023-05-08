@@ -11,6 +11,7 @@ const contactModel = require('./models/contactModel')
 const quickenquiryModel = require('./models/quickenquiryModel')
 const contactController = require('./controller/contactController')
 const auth = require('./middleware/auth');
+const adminModel = require('./models/adminModel')
 const nodemailer = require('nodemailer')
 const session= require("express-session");
 app.use(session({secret:"My Secret"}))
@@ -24,7 +25,7 @@ app.listen(port, () => {
   
  app.get("/" ,function(req,res)
  {
-     res.render('index')
+     res.render('index',{message:false})
  })
  app.get("/contact", function(req,res)
  {
@@ -42,17 +43,35 @@ app.listen(port, () => {
  {
      res.render('tandc')
  })
- app.get("/adminlogin",function(req,res)
- {
-    res.render('adminloginpage')
- })
-app.get("/adminpage",contactController.renderadminpage)
+app.get('/adminlogin',auth.userisLogout,function(req,res)
+{
+    res.render('adminloginpage',{message:'anything'})
+}) 
+app.post('/',contactController.subscribers)
+app.get("/adminpage",auth.userisLogin,contactController.renderadminpage)
 app.post('/contact',contactController.acceptcontact)
 app.post('/about',contactController.acceptquickenquiry)
-app.get('/adminquickmails',contactController.quickemails)
-app.get('/admincontactusmails',contactController.contactemails)
-app.post("/adminlogin",contactController.adminlogin)
-
+app.get('/adminquickmails',auth.userisLogin,contactController.quickemails)
+app.get('/admincontactusmails',auth.userisLogin,contactController.contactemails)
+app.get('/adminemailsubscribers',auth.userisLogin,contactController.subscribermail)
+app.post("/adminlogin",auth.userisLogout,contactController.adminlogin)
+app.post('/sendadmin',async function(req,res)
+{
+   try{
+       const admin = new adminModel(
+        {
+            username:"pickntrack@gmail.com",
+            pass:"@pickntrack2023"
+        }
+       )
+       const singleadmin = await admin.save();
+       res.send("admin saved")
+   }
+   catch(error)
+   {
+     console.log(error.message)
+   }
+})
  //Database Connection
  mongoose.connect(mongourl, {
     useNewUrlParser: true,

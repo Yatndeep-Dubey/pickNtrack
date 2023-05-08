@@ -1,14 +1,15 @@
-
+require('dotenv').config()
 const nodemailer= require('nodemailer')
 const contactModel= require('../models/contactModel')
 const quickenquiryModel= require('../models/quickenquiryModel')
 const adminModel = require('../models/adminModel')
-
-
+const subscriberModel =require('../models/subscribersModels')
+const adminmail=process.env.SMAIL
+const adminpass=process.env.SPASS
 const sendmail2 = async (receiver,subject,messageusr)=>
 {
-   const smail= "apppicknt@gmail.com"
-   const spass = "qymaivyomqzbuipb"
+   const smail= adminmail
+   const spass = adminpass
     var subjectto = subject
     var message = messageusr
 let transporter = nodemailer.createTransport({
@@ -128,7 +129,47 @@ const quickemails = async function(req,res)
 const contactemails = async function(req,res)
 {
     const allcontactemails = await contactModel.find()
-    res.render('contactmails',{allemails:allcontactemails})
+    if(allcontactemails)
+    {
+      res.render('contactmails',{allemails:allcontactemails,message:false})
+    }
+    else{
+      res.render('contactmails',{message:"No Mails Yet"})
+    }
+}
+const subscribers = async function (req,res)
+{
+    const subscribersmail = req.body.email
+    try{
+       const singlesubscriber = new subscriberModel(
+        {
+          email:subscribersmail
+        }
+       )
+       const subscribe = singlesubscriber.save()
+       res.render('index',{message:'swal'})
+    }
+    catch(error)
+    {
+
+    }
+}
+const subscribermail = async function (req,res)
+{
+  try{
+         const allsubscribers = await subscriberModel.find()
+         if(allsubscribers)
+    {
+      res.render('subscribers',{allsubscribersemails:allsubscribers,message:false})
+    }
+    else{
+      res.render('subscribers',{message:"No Mails Yet"})
+    }
+  }
+  catch(error)
+  {
+    console.log(error.message)
+  }
 }
 const adminlogin = async function(req,res){
   const adminname = req.body.username
@@ -144,12 +185,12 @@ const adminlogin = async function(req,res){
     }
     else
     {
-      res.render('adminloginpage')
+      res.render('adminloginpage',{message:'swal'})
     }
   }
   else
   {
-    res.render('adminloginpage')
+    res.render('adminloginpage',{message:'swal'})
   }
 }
 const renderadminpage = async function(req,res){
@@ -162,5 +203,7 @@ module.exports=
     quickemails,
     contactemails,
     adminlogin,
-    renderadminpage
+    renderadminpage,
+    subscribers,
+    subscribermail
 }

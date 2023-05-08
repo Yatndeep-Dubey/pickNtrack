@@ -14,6 +14,8 @@ function search_cities() {
     }
 }
 
+// subscribers thanks message
+
 const varbody = document.getElementById('struct')
 function blurbody()
 {

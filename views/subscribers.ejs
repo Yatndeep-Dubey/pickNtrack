@@ -111,6 +111,11 @@
         animation-name: fade;
         animation-duration: 1.5s;
       }
+      .emails
+      {
+        display: flex;
+        justify-content: center;
+      }
 
       @keyframes fade {
         from {
@@ -205,12 +210,32 @@
           class="hidden lg:flex justify-between items-center bg-yellowish py-2 px-24"
         >
           <img src="public/images/logo-big.svg" alt="logo" />
-
           <ul class="flex gap-10 font-bold text-lg">
-            <li><a href="/quickenquirymails">Quick Enquiry Mails</a></li>
-            <li><a href="/contactusmails">Contact Us Mails</a></li>
-            <li><a href="/subscribers">Our Subscribers</a></li>
+            <li><a href="/adminquickmails">Quick Enquiry Mails</a></li>
+            <li><a href="/admincontactusmails">Contact Us Mails</a></li>
+            <li><a href="/adminemailsubscribers">Our Subscribers</a></li>
           </ul>
+         
         </div>
       </div>
     </header>
+    
+    <% if (message == false) { %>
+      <div class="emails">
+        <table>
+          <th>
+            Subscribers
+          </th>
+          <%  allsubscribersemails.forEach(element => { %>
+            <tr >
+            <td style="border:2px solid pink"><%=element.email%></td> 
+          </tr>
+        <%}) %>
+        </table>
+      </div>
+      <%} 
+      else { %>
+        <div class="emails">
+      <p> <%=message%> </p>
+    </div>
+      <% } %>

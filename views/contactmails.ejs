@@ -225,16 +225,17 @@
           <ul class="flex gap-10 font-bold text-lg">
          
             <ul class="flex gap-10 font-bold text-lg">
-                <li><a href="/adminquickmails">Quick Enquiry Mails</a></li>
-                <li><a href="/admincontactusmails">Contact Us Mails</a></li>
-                <li><a href="/subscribers">Our Subscribers</a></li>
-              </ul>
+              <li><a href="/adminquickmails">Quick Enquiry Mails</a></li>
+              <li><a href="/admincontactusmails">Contact Us Mails</a></li>
+              <li><a href="/adminemailsubscribers">Our Subscribers</a></li>
+            </ul>
           </ul>
         </div>
       </div>
     </header>
     <!--Making Card-->
-    <div class="card-container">
+    <% if (message == false) { %>
+      <div class="card-container">
         <%  allemails.forEach(element => { %>
             <div class="card">
                 <h1>Name:<%=element.name%> </h1>
@@ -247,5 +248,9 @@
                 <p><%=element.message%></p>
              </div>  
         <%}) %>
+    </div>
+      <%} 
+      else { %>
+      <p> <%=message%> </p>
+      <% } %>
    
-</div>
