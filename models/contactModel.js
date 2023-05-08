@@ -28,6 +28,10 @@ const contactSchema= new Schema({
     message:
     {
        type:String
+    },
+    date:
+    {
+        type:String
     }
 
 

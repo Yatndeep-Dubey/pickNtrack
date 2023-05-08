@@ -1,0 +1,84 @@
+<style>
+    .dispopup
+      {
+          box-sizing: border-box;
+          position:absolute;
+          height: auto;
+          top: 100px;
+          left: 200px;
+          margin: 0 auto;
+          background: #FFFFFF;
+          display: none;
+          border: 1.26643px solid rgba(112, 112, 112, 0.6);
+          border-radius: 8.44284px;
+          z-index: 99;
+          padding: 15px;
+          text-align: justify;
+          font-family: 'Lato';
+          justify-self: center;
+      }
+      .dispopup h3
+      {   
+           font-size: 20px;
+           margin-bottom: 5px;
+           font-weight: bold;
+      }
+      .dispopup p{
+         font-size: 15px;
+      }
+      .line
+      {
+        height: 2px;
+        background-color: black;
+        min-width: 323px;
+      }
+      .popupnav
+      {
+        position: sticky;
+      }
+      .dis-content
+      {
+        overflow:auto;
+        height: 525px ;
+        padding-right: 10px;
+        
+      }
+      ::-webkit-scrollbar {
+        display: none;
+         }
+         @media screen and (max-width: 480px) {
+         .dispopup
+         {
+            left: 5px;
+            margin: 0 auto;
+            right:5px;
+            justify-self: center;
+            width: 350px;
+            height: 600px;
+         }
+    }
+    </style>
+
+
+
+
+<div class="dispopup w-fit lg:w-[1000px] " id="dispopup">
+    <div class="flex lg:space-x-[75%] mb-[10px] popupnav space-x-[27%] lg:py-7 lg:px-5 ">
+    <h1 class="text-3xl lg:font-extrabold font-bold">Disclaimer</h1>
+    <h1 id="closedispopup" class="cursor-pointer text-3xl lg:font-extrabold font-bold">X</h1>
+  </div>
+     <div class="line mb-[10px] "></div>
+    <div class="dis-content lg:mt-7 py-2">
+        <h3>Disclaimer</h3>
+        <p>Our policies are provided with just one purpose and is the purpose of helping our customers with their needs.
+        </p>
+           <p> We do our absolute best to provide our customers with the best policies that we can make, but we cannot guarantee that our job is more reliable than the one a lawyer can make.
+           </p>
+    
+           <p> Termify.io is not responsible for any content, code or any other imprecision.We are not lawyers.</p>
+           <p> Termify.io does not provide warranties or guarantees. Nothing in Terrify shall be considered legal advice and there's no lawyer-client relationship established at any moment. Please keep in mind that in some cases, depending on your countries legislation, some extra actions may be required in order to make your website completely legal.
+    
+           </p>
+    </div>
+  
+  </div> 

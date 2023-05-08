@@ -103,7 +103,7 @@
     {
         flex-direction: column-reverse;
         justify-content: center;
-        
+        margin-top: 10px;
     }
     .truckimg
     {
@@ -114,7 +114,6 @@
     {
          font-size: 30px;
          font-weight: 900;
-         
     }
     .mainsectiontext
     {
@@ -141,16 +140,18 @@
 <%-include('partials/privacy')-%>
 <%-include('partials/tandc')-%>
 <%-include('partials/faq')-%>
+<%-include('partials/disclaimer')-%>
+<%-include('partials/thankspopup')-%>
     <!-- header section -->
 <%-include('partials/header')-%>
       <!--contact Us img-->
       <div class="mainsection w-full">
         <div class="mainsectiontext">
-            <div class="mainsectiontitle">
+            <div class="mainsectiontitle text-center">
                 <h1>Contact Us</h1>
             </div>
             <div class="mainsectionsecondtitle">
-                <h1>We Are Accredited</h1>
+                <h1 class="mt-5">We Are Accredited</h1>
             </div>
         </div>
         <div class="truckimg">
@@ -162,11 +163,11 @@
 
   
 <!--Card-->
-<div class="grid grid-cols-1 gap-10 my-16 lg:grid-cols-3 lg:px-10 ">
+<div class="grid grid-cols-1 gap-10 my-32 lg:grid-cols-3 lg:px-10 ">
 <div class="flex flex-col items-center mx-auto w-fit">
   <img src="public/images/Group 289.png" alt="email logo" class="h-16 relative z-10">
-  <div class="shadow-xl rounded-lg mx-5 -mt-5 mb-5 p-10 lg:w-96 w-72 h-64 flex flex-col items-center">
-    <p class="text-center font-bold text-2xl">Our Address</p>
+  <div class="shadow-xl rounded-lg mx-5 -mt-10 mb-5 p-10 lg:w-96 w-72 h-64 flex flex-col items-center">
+    <p class="text-center font-bold text-2xl mt-5">Our Address</p>
     <p class="text-center mt-5 font-bold">
       118 Singanayakanahalli Yelahanka Hobli Bangalore North, near Navachethana School, Bangalore, Karnataka-560064, India</p>
   </div>
@@ -174,16 +175,16 @@
 
 <div class="flex flex-col items-center mx-auto w-fit">
   <img src="public/images/Group 288.png" alt="email logo" class="h-16 relative z-10">
-  <div class="shadow-xl rounded-lg mx-5 -mt-5 mb-5 p-10 lg:w-96 w-72 h-64 flex flex-col items-center">
-    <p class="text-center font-bold text-2xl">Contact Us</p>
+  <div class="shadow-xl rounded-lg mx-5 -mt-10 mb-5 p-10 lg:w-96 w-72 h-64 flex flex-col items-center">
+    <p class="text-center font-bold text-2xl mt-5">Contact Us</p>
     <p class="text-center mt-5 font-bold">Customer Care:<br> +91-911-365-1818 Claims & Support: +91-953-853-1818</p>
   </div>
 </div>
 
-<div class="flex flex-col items-center mx-auto w-fit">
+<div class="flex flex-col items-center mx-auto w-fit ">
   <img src="public/images/Group 287.png" alt="email logo" class="h-16 relative z-10">
-  <div class="shadow-xl rounded-lg mx-5 -mt-5 mb-5 p-10 lg:w-96 w-72 h-64 flex flex-col items-center">
-    <p class="text-center font-bold text-2xl">Our Email</p>
+  <div class="shadow-xl rounded-lg mx-5 -mt-10 mb-5 p-10 lg:w-96 w-72 h-64 flex flex-col items-center ">
+    <p class="text-center font-bold text-2xl mt-5">Our Email</p>
     <p class="text-center mt-5 font-bold">
 info@pickntrack.com/ <br>pickntrack@gmai.com</p>
   </div>
@@ -192,19 +193,18 @@ info@pickntrack.com/ <br>pickntrack@gmai.com</p>
 
 
 
-
 <!--card end-->
-<h1 class="text-4xl md:text-6xl lg:mx-20 mx-[25px] text-black font-semibold">Get In Touch</h1>
+<h1 class="text-4xl md:text-5xl lg:mx-[60px] -mt-24 ml-7  lg:mt-0 text-black font-semibold">Get In Touch</h1>
 
-<section class="md:h-full  flex items-center text-gray-600">
+<section class="md:h-full -mt-5 lg:mt-0 flex items-center text-gray-600">
   <div class="container  px-5 py-14 mx-auto">
      
 <div class="row  w-[100%]  bg-gray-100  rounded-lg shadow px-4">
 
-  <form class="space-y-6 bg-gray-100 " action="#">
-      <div class="text-2xl  font-medium font-poppins font-semibold text-gray-900">Contact Us</div>
+  <form class="space-y-6 bg-gray-100 " action="#" method="post">
+      <div class="text-2xl  font-medium font-poppins font-semibold text-gray-900 pt-3">Contact Us</div>
       <div>
-          <label for="name" class="block mb-2 text-lg text-black bold ">Name*</label>
+          <label for="name" class="block mb-2 -mt-2 text-lg text-black bold ">Name*</label>
           <input type="name" name="name" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
       </div>
 
@@ -216,18 +216,19 @@ info@pickntrack.com/ <br>pickntrack@gmai.com</p>
     <div >
       <label for="email" class="block mb-2 text-lg text-black bold ">Phone Number*</label>
 
-<div class="grid grid-cols-11 gap-3">
-  <select class=" ... place bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5">
-    <option>+91</option>
-    <option value="1">+31</option>
-    <option value="2">+02</option>
-    <option value="3">+15</option>
+<div class="flex gap-3 ">
+  <select class=" ... place bg-gray-300 text-black  text-sm rounded-full block lg:w-[60px] p-1 " name="countrycode">
+    <option value="+91">+91</option>
+    <option value="+31">+31</option>
+    <option value="+02">+02</option>
+    <option value="+15">+15</option>
 </select>
 
-<div class="col-span-10">
-      <input type="name" name="name" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required> 
+<div class="col-span-10 w-full">
+      <input type="number" name="phone" class="bg-gray-300 text-black  text-sm rounded-full block w-full  p-2.5 " required> 
 </div>
-</div></div>
+</div>
+</div>
   <div>
     <label for="loctaion" class="block mb-2 text-lg text-black bold ">Location*</label>
     <input type="name" name="location" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
@@ -236,35 +237,31 @@ info@pickntrack.com/ <br>pickntrack@gmai.com</p>
 <div>
   <label for="email" class="block mb-2 text-lg text-black bold ">Query*</label>
  
-  <select  class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 ">           
+  <select  class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " name="query">           
     <option class="choose"> Choose the Query Type</option>
-    <option value="1">Business Inquiry</option>
-    <option value="2">Complaint </option>
-    <option value="3">Suggestion </option>
-    <option value="3">Feedback</option>
-    <option value="3"> Career </option>
+    <option value="Business Enquiry">Business Inquiry</option>
+    <option value="Complaint">Complaint </option>
+    <option value="Suggestion">Suggestion </option>
+    <option value="Feedback">Feedback</option>
+    <option value="Career"> Career </option>
 </select>
 </div>
-<div>
+<div >
   <label for="msgg" class="block mb-2 text-lg text-black bold ">Message*</label>
-  <input type="name" name="msg" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
+  <input type="name" name="message" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required>
 </div>
+<div>
+<button class="bg-black text-white font-bold text-xl py-2 px-10 rounded-full " type="submit">Submit</button>
+</div>
+<br>
 
-<button class="bg-black text-white font-bold text-xl py-2 px-10 rounded-full">Submit</button>
-
-      <div class="flex items-start">
-          <div class="flex items-start">
-              
-          </div>
-        
-      </div>
-   
+      
      
   </form>
 
 </div>
 </section>
-<div style="height: 100px;"></div>
+
 
 
 <%-include('partials/footer')-%>
@@ -401,6 +398,51 @@ const faqpopup = document.getElementById('faqpopup')
         var struct=document.getElementById('struct');
         struct.style.opacity='0.2'
         struct.style.pointerEvents='none'
-    }         
+    }       
+    
+    // thanks popup
+    // popup script
+   const varbody= document.getElementById('struct');
+   function blurbody()
+{
+  varbody.style.opacity='0.2'
+  varbody.style.pointerEvents='none'
+  varbody.style.userSelect='none'
+}
+function freebody()
+{
+      varbody.style.opacity='1'
+      varbody.style.pointerEvents='auto'
+      varbody.style.userSelect='auto'
+}
+    //closethankspopup
+    document.getElementById('closethankspopup').addEventListener('click',closethankspopup)
+     document.getElementById('closemobthankspopup').addEventListener('click',closethankspopup)
+     function closethankspopup()
+     {
+        document.getElementById('thankspopup').style.display='none'
+        freebody()
+     }
+     document.getElementById('opendispopup').addEventListener('click',()=>
+     {
+        document.getElementById('dispopup').style.display='block'
+        document.getElementById('dispopup').style.opacity='1'
+        blurbody()
+     }) 
+     //close disclaimerpopup
+      document.getElementById('closedispopup').addEventListener('click',()=>
+      {
+         document.getElementById('dispopup').style.display='none'
+         freebody()
+      })
+     // open thankspopoup
+      const thanksmessage = '<%=message%>'
+      if(thanksmessage=='true')
+      {
+        document.getElementById('thankspopup').style.display='flex'
+        document.getElementById('thankspopup').style.opacity='1'
+        document.getElementById('thankspopup').style.zIndex='400'
+         blurbody()
+      }
   </script>
 </html>

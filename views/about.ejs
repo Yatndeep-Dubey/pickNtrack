@@ -20,7 +20,9 @@
 </head>
 <body>
     <style>
-      
+      * {
+        font-family: "Poppins", sans-serif;
+      }
 
         .bg-blackish {
           background-color: #2e2e2e;
@@ -161,6 +163,7 @@
             {
                 flex-direction: column-reverse;
                 justify-content: center;
+                margin-top: 50px;
                 
             }
             .truckimg
@@ -183,13 +186,13 @@
                 margin-left: 0px;
                 padding:20px;
                 min-width: 100%;
-                margin-top: 30px;
-                margin-top: 40px;
+                margin-top: 5px;
             }
             .mainsectionsecondtitle h1 
             {
                 font-size: 25px;
                 font-weight: 700;
+                text-align: center;
             }
             
             .secondsection p
@@ -223,6 +226,7 @@
                 height: auto;
                 min-width: 100%;
                 padding:20px;
+                margin-top: 2px;
             }
             
             .thirdsection p
@@ -232,14 +236,17 @@
             }
             .numbersection
             {
+                margin-top: 20px;
                 margin-left:0px;
                 min-width:100%;
+                margin-bottom: -20px;
             }
             .quickbutton button 
             {
-                margin-left: 45px;
+                align-items: center;
                 height: 50px;
                 width: 150px;
+                margin-top: 20px;
             }
             .exprience-heading
             {
@@ -276,15 +283,16 @@
 <%-include('partials/privacy')-%>
   <%-include('partials/tandc')-%>
   <%-include('partials/faq')-%>
-      <section class="md:h-full  flex items-center text-gray-600  absolute mt-[10%] lg:mr-[10%] lg:ml-[16%] hidden " id="enquirypopup">
+  <%-include('partials/disclaimer')-%>
+      <section class="md:h-full  flex items-center text-gray-600  absolute mt-[10%] lg:mr-[10%] lg:ml-[16%] hidden" id="enquirypopup">
         <div class="container  px-5 py-14 lg:mx-auto">
            
       <div class="row  lg:w-[100%]  bg-gray-100  rounded-lg shadow px-4 dark:bg-gray-800 dark:border-gray-700 " id="enquirypopuppart1">
       
-        <form class="space-y-6 bg-gray-100  " action="#" id="enquirypopuppart2" method="post">
-            <div class=" text-gray-900 dark:text-white flex flex-row py-[20px] ">
-              <h1 class="text-black bold text-xl">Please fill in below form fields and send us your Enquiry.</h1>
-              <h1 class="lg:ml-[35%] text-black bold text-2xl cursor-pointer" id="closeenquirypopup">X</h1>
+        <form class="space-y-4 bg-gray-100  " action="#" id="enquirypopuppart2" method="post">
+            <div class=" text-gray-900 dark:text-white flex flex-row pt-[20px] ">
+              <h1 class="text-black lg:font-bold  font-semibold lg:text-xl text-lg">Please fill in below form fields <br class="lg:hidden">and send us your Enquiry.</h1>
+              <h1 class="absolute right-10 text-black lg:font-bold font-semibold lg:text-2xl  text-xl cursor-pointer" id="closeenquirypopup">X</h1>
             </div>
             <div>
                 <label for="name" class="block mb-2 text-lg text-black bold ">Name*</label>
@@ -299,15 +307,15 @@
           <div >
             <label for="email" class="block mb-2 text-lg text-black bold ">Phone Number*</label>
       
-      <div class="grid grid-cols-11 gap-3">
-        <select class=" ... place bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5" name="countrycode">
+      <div class="grid grid-cols-11 lg:gap-3 ">
+        <select class=" ... place bg-gray-300 text-black  text-sm rounded-full block w-[60px] p-1" name="countrycode">
           <option value="+91">+91</option>
           <option value="+31">+31</option>
           <option value="+02">+02</option>
           <option value="+15">+15</option>
       </select>
       
-      <div class="col-span-10">
+      <div class="w-[230px]  lg:min-w-[850px] ml-10 lg:ml-0">
             <input type="name" name="phone" class="bg-gray-300 text-black  text-sm rounded-full block w-full p-2.5 " required> 
       </div>
       </div></div>
@@ -336,25 +344,25 @@
       
       </div>
  </section>
-
+ <%-include('partials/thankspopup')-%>
 
 
 
       <!-- header section -->
 <%-include('partials/header')-%>
-<%-include('partials/thankspopup')-%>
+
       <!--Navbar Ends-->
       <div class="mainsection w-full">
             <div class="mainsectiontext">
                 <div class="mainsectiontitle">
                     <h1>About Pick'N Track</h1>
                 </div>
-                <div class="mainsectionsecondtitle">
+                <div class="mainsectionsecondtitle mt-5">
                     <h1>We Are Accredited</h1>
                 </div>
             </div>
             <div class="truckimg">
-            <img src="public/images/truckimg.png">
+            <img src="public/images/truck.svg">
             </div>
      </div>
      <!--PopUP Form-->
@@ -382,34 +390,41 @@
    <b>
      <h1 class="text-bold lg:text-5xl text-3xl">Mission</h1>
    </b>
-     <br>
-     <br>
+     <br class="hidden lg:flex">
+     <br class="hidden lg:flex">
+     
      <br>
      <p>
          At the core of our way of life
           is a mix of mentalities, convictions, and values and a mission shared by our 
           supervisory group and our representatives
      </p>
+     <br>
      <p>
          Our way of life has been created over our long term history and 
          is the basic establishment that shapes the manner in which we work, our frameworks and cycles,
           our way to deal with our representatives and clients, and our effect on the more extensive local area and climate.
      </p>
-     <p>
+     <br>
+     <p class="text-left" >
          "Our Mission to offer predictable magnificent support to our customers"
      </p>
+     <br>
      <p> We accomplish our central goal by:</p>
+     <br>
      <p>• Getting our clients'' individual requirements and afterward conveying services to increase their assumptions.</p>
      <p>• Create innovative, customised solutions geared to each transferee’s unique requirements.</p>
      <p>• Giving a positive culture to our staff to learn and develop Implement simple yet first-class services and support.</p>
-     <p>• Taking on best practices to decrease the effect of our business on the climate and the more extensive local area.</p>
+     <p>• Taking on best practices to decrease the effect of our business on the climate and the more extensive local  area.</p>
      <p>• Acting with the most noteworthy respectability consistently.</p> 
+     <br>
      <p>
          Amazing Solution expect to give the most elevated conceivable nature of Services, 
          has led to the advancement of wonderful arrangement'' Moving with Quality'' drive, 
          a cross country program of client assessment, best practice methodology,
           execution improvement arranging, consistent preparation, and survey.
      </p>
+     <br>
      <p>
          Moving with Quality'' drive, a cross 
          country program of client assessment, best
@@ -430,18 +445,22 @@
  <div class="numbersection">
      <div class="numbersection-first">
          <h1><span class="exprience-heading num " data-val="25"></span>+ Years</h1>
+         <br>
          <p>Experienced Team in Industry</p>
      </div>
      <div class="numbersection-first">
         <h1><span class="largenum" largedata-val="50000"></span>+</h1> 
+        <br>
          <p>Happy <br>Customers</p>
      </div>
      <div class="numbersection-first">
          <h1><span class="mediumnum" mediumdata-val="5000"></span>+</h1>
+         <br>
          <p>Pincode <br>Served</p>
      </div>
      <div class="numbersection-first">
         <h1> <span class="num" data-val="1000"></span>+</h1>
+        <br>
          <p> Registered<br> Clients</p>
      </div>
  
@@ -577,13 +596,15 @@ const burger = document.getElementById('burger')
    const varbody= document.getElementById('struct');
    function blurbody()
 {
-  varbody.style.opacity='1'
+  varbody.style.opacity='0.2'
   varbody.style.pointerEvents='none'
+  varbody.style.userSelect='none'
 }
 function freebody()
 {
       varbody.style.opacity='1'
       varbody.style.pointerEvents='auto'
+      varbody.style.userSelect='auto'
 }
    document.getElementById('closeenquirypopup').addEventListener('click',()=>
    {
@@ -595,6 +616,7 @@ function freebody()
   {
       document.getElementById('enquirypopup').style.display='block';
       document.getElementById('enquirypopup').style.opacity='1';
+      document.getElementById('enquirypopup').style.zIndex='100'
       document.getElementById('enquirypopuppart1').style.opacity='1'
       document.getElementById('enquirypopuppart2').style.opacity='1'
       blurbody()
@@ -606,9 +628,7 @@ function freebody()
     {
         console.log("button chal rha hai")
         privacypopup.style.display='none'
-        var struct = document.getElementById('struct')
-        struct.style.opacity='1'
-        struct.style.pointerEvents='auto'
+        freebody()
     }  
      //open popuop
     document.getElementById('openprivacypopup').addEventListener('click',openpopup)
@@ -618,9 +638,7 @@ function freebody()
         console.log(" open button chal rha hai")
         privacypopup.style.display='block'
         privacypopup.style.opacity='1'
-        var struct=document.getElementById('struct');
-        struct.style.opacity='0.2'
-        struct.style.pointerEvents='none'
+        blurbody()
     }  
 // terms popup
 const termspopup = document.getElementById('termspopup')
@@ -629,9 +647,7 @@ const termspopup = document.getElementById('termspopup')
     {
         console.log("button chal rha hai")
         termspopup.style.display='none'
-        var struct = document.getElementById('struct')
-        struct.style.opacity='1'
-        struct.style.pointerEvents='auto'
+        freebody()
     }  
      //open popuop
     document.getElementById('opentermspopup').addEventListener('click',opentermspopup)
@@ -641,9 +657,7 @@ const termspopup = document.getElementById('termspopup')
         console.log(" open button chal rha hai")
         termspopup.style.display='block'
         termspopup.style.opacity='1'
-        var struct=document.getElementById('struct');
-        struct.style.opacity='0.2'
-        struct.style.pointerEvents='none'
+        blurbody()
     } 
     // Faq popup
 const faqpopup = document.getElementById('faqpopup')
@@ -652,11 +666,9 @@ const faqpopup = document.getElementById('faqpopup')
     {
         console.log("button chal rha hai")
         faqpopup.style.display='none'
-        var struct = document.getElementById('struct')
-        struct.style.opacity='1'
-        struct.style.pointerEvents='auto'
+         freebody()
     }  
-     //open popuop
+     //open faqpopuop
     document.getElementById('openfaqpopup').addEventListener('click',openfaqpopup)
     document.getElementById('openmobfaqpopup').addEventListener('click',openfaqpopup)
     function openfaqpopup()
@@ -664,10 +676,21 @@ const faqpopup = document.getElementById('faqpopup')
         console.log(" open button chal rha hai")
         faqpopup.style.display='block'
         faqpopup.style.opacity='1'
-        var struct=document.getElementById('struct');
-        struct.style.opacity='0.2'
-        struct.style.pointerEvents='none'
-    } 
+          blurbody()
+    }
+    // open disclaimer popup 
+     document.getElementById('opendispopup').addEventListener('click',()=>
+     {
+        document.getElementById('dispopup').style.display='block'
+        document.getElementById('dispopup').style.opacity='1'
+        blurbody()
+     }) 
+     //close disclaimerpopup
+      document.getElementById('closedispopup').addEventListener('click',()=>
+      {
+         document.getElementById('dispopup').style.display='none'
+         freebody()
+      })
     // thanks popup
     //closethankspopup
      document.getElementById('closethankspopup').addEventListener('click',closethankspopup)
@@ -675,12 +698,16 @@ const faqpopup = document.getElementById('faqpopup')
      function closethankspopup()
      {
         document.getElementById('thankspopup').style.display='none'
+        freebody()
      }
      // open thankspopoup
       const thanksmessage = '<%=message%>'
       if(thanksmessage=='true')
       {
         document.getElementById('thankspopup').style.display='flex'
+        document.getElementById('thankspopup').style.opacity='1'
+        document.getElementById('thankspopup').style.zIndex='400'
+         blurbody()
       }
  </script>
  </html>

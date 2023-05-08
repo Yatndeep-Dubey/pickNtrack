@@ -10,7 +10,10 @@ const mongourl= process.env.MONGO ;
 const contactModel = require('./models/contactModel')
 const quickenquiryModel = require('./models/quickenquiryModel')
 const contactController = require('./controller/contactController')
+const auth = require('./middleware/auth');
 const nodemailer = require('nodemailer')
+const session= require("express-session");
+app.use(session({secret:"My Secret"}))
 app.listen(port, () => {
     console.log('Server is running at :'+ port);
   });
@@ -39,10 +42,16 @@ app.listen(port, () => {
  {
      res.render('tandc')
  })
- 
-
+ app.get("/adminlogin",function(req,res)
+ {
+    res.render('adminloginpage')
+ })
+app.get("/adminpage",contactController.renderadminpage)
 app.post('/contact',contactController.acceptcontact)
 app.post('/about',contactController.acceptquickenquiry)
+app.get('/adminquickmails',contactController.quickemails)
+app.get('/admincontactusmails',contactController.contactemails)
+app.post("/adminlogin",contactController.adminlogin)
 
  //Database Connection
  mongoose.connect(mongourl, {

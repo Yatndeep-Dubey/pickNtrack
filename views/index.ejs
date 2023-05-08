@@ -43,7 +43,7 @@
       
 .popup
 {
-  height: 550px;
+  height: auto;
   width: 580px;
   left: 30%;
   top: 30px;
@@ -70,7 +70,8 @@
   justify-content: space-evenly;
   row-gap: 2px;
   margin-top: 15px;
-  
+  overflow-y: auto;
+  height: 420px;
 }
 .cities
 {
@@ -78,7 +79,6 @@
   flex-direction: column;
   align-items: center;
   list-style: none;
-  
 }
 .cities img:hover
 {
@@ -157,17 +157,18 @@
     }
     .popsearch input
     {
-        max-width: 80%;
+        max-width: 90%;
     }
     .firstdivpop
     {
           flex-direction: column;
           max-width: 80%;
+          
     }
     .firstdivpop a
     {
-        margin-top: -14px;
-        margin-left: auto
+        position: absolute;
+        right: 20px;
     }
    
 }
@@ -319,6 +320,7 @@
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto auto;
         row-gap: 5;
+       
     }
     .firstdivpop
     {
@@ -335,11 +337,11 @@
     </style>
           <!--Popup Page -->
  <div class="popup" id="popuppage">
-    <div>
+    <div class="sticky">
       <div class="firstdivpop">
         <h1 class="pl-[3px]"><b>Select Your City</b></h1>
         <a href="#" id="closePopup">
-          <h1>X</h1>
+          <h1 class="font-bold">X</h1>
         </a>
       </div>
       <div class="popsearch">
@@ -384,12 +386,17 @@
         <img src="./public/images/ahmedabad.jfif" alt=""> <br><br>
         <h1><a>Ahmedabad</a></h1>
       </div>
+      <div class="cities">
+        <img src="./public/images/ahmedabad.jfif" alt=""> <br><br>
+        <h1><a>Ahmedabad</a></h1>
+      </div>
     </div>
 
   </div>
   <%-include('partials/privacy')-%>
   <%-include('partials/tandc')-%>
   <%-include('partials/faq')-%>
+  <%-include('partials/disclaimer')-%>
   <!--PopUp End-->
 <%-include('partials/header')-%>
 
@@ -408,7 +415,7 @@
           Find, compare, and hire certified and experienced movers in one
           location.
         </p>
-        <p class="text-sm md:text-base lg:text-lg">
+        <p class="text-sm md:text-base lg:text-lg text-justify px-5">
           Save time and money by connecting with us to help set up your
           utilities, find movers & other services
         </p>
@@ -455,7 +462,7 @@
     <!-- plan route section -->
     <div>
       <p
-        class="text-center text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl"
+        class="text-center text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl mx-5"
       >
         Get ready to plan your route to your new city!
       </p>
@@ -566,11 +573,11 @@
         </p>
       </div>
       <div
-        class="w-full flex justify-center md:justify-start pl-10 lg:max-w-6xl mx-auto"
+        class="w-full flex justify-center md:justify-start lg:pl-10 lg:max-w-6xl mx-auto"
       >
       <a href="/about">
         <button
-          class="bg-blackish text-white px-3 py-2 rounded-xl md:text-xl lg:text-xl"
+          class="bg-blackish text-white px-3 py-2 rounded-xl md:text-xl lg:text-xl "
         >
           Quick Enquiry
         </button>
@@ -581,12 +588,12 @@
     <!-- mfimovers sections -->
     <div class="bg-yellow-light p-10 space-y-5 lg:space-y-10 lg:p-16 lg:mt-24">
       <p
-        class="text-center text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl lg:max-w-6xl mx-auto lg:text-2xl"
+        class="text-center text-lg font-bold sm:text-2xl md:text-3xl lg:text-4xl lg:max-w-6xl mx-auto lg:text-2xl"
       >
         Top <span class="text-[#865a00] font-extrabold">#mfimovers</span> in the
         country
       </p>
-      <p class=" lg:max-w-6xl mx-auto lg:text-lg">
+      <p class=" lg:max-w-6xl mx-auto lg:text-lg ">
         Looking for relocation companies in your area? Check out our #mfimovers
         hubwhere we've vetted the top relocation companies in major cities and
         states across India. <br />
@@ -598,7 +605,7 @@
     <!-- how it works section -->
     <div class="my-24">
       <p
-        class="text-center text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl mb-10"
+        class="text-center text-3xl font-bold sm:text-2xl md:text-3xl lg:text-4xl mb-10"
       >
         How It Works
       </p>
@@ -660,7 +667,7 @@
     <!-- customer reviews section -->
     <div class="mb-16">
       <p
-        class="text-center text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl mb-16"
+        class="text-center text-lg font-bold sm:text-2xl md:text-3xl lg:text-4xl mb-16"
       >
         What Our Customers Say About Us!
       </p>
@@ -668,7 +675,7 @@
         <img
           src="public/images/quotes.svg"
           alt="quotes logo"
-          class="absolute -z-10 w-56"
+          class="absolute -z-10 lg:w-56 w-36 mt-10 lg:mt-0"
         />
         <div class="mySlides fade">
           <p class="text-[#808080] text-center my-5">Ayanjyoti Chakrabarti</p>
@@ -685,43 +692,36 @@
         </div>
 
         <div class="mySlides fade">
-          <p class="text-[#808080] text-center my-5">Rachit Bhardwaj</p>
+          <p class="text-[#808080] text-center my-5">Vivek Kumar</p>
           <p class="text-xs lg:text-base text-justify mx-10 lg:mx-24">
-            I had used the service of MFI's Pick N Track - Bangalore for my
-            house shifting. They delivered timely service. Took care of my
-            movement requirements end-end. Needed no or minimum supervision.
-            Packing material used were of high standard, resulting no damage
-            delivery. My requirement had the complexity of moving big articles
-            through stairs to 8th floor, which was handled very efficiently.In
-            summary, I was fully satisfied with the service received and would
-            recommend others.
+            I have used MFI Pick N Track - Bangalore services for shipping my car and belongings from Bengaluru to Lucknow. 
+            I was in contact with Mr. Ajit Sharma Ji founder of MFI. He is a thorough professional, trust worthy, logistic industry
+             veteran and excellent human being. I see that he has defined SOP for doing everything in MFI and partners. He explained me
+              topics which safeguard the customers interest. For example: The car should be insured and he offered me free car insurance
+               worth INR 5 lakhs, the car was cleaned before delivery, updating me with videos etc etc. And many small things which we ignore 
+               as a customer. I have never come across any packers company which safeguard end user interest which is very positive with MFI.
+             I highly recommend MFI Pick N Track - Bangalore and it's partner for their extremely excellent, quick and amazing services.
           </p>
         </div>
 
         <div class="mySlides fade">
-          <p class="text-[#808080] text-center my-5">Yatndeep Dubey</p>
+          <p class="text-[#808080] text-center my-5">Manthan Talati</p>
           <p class="text-xs lg:text-base text-justify mx-10 lg:mx-24">
-            I had used the service of MFI's Pick N Track - Bangalore for my
-            house shifting. They delivered timely service. Took care of my
-            movement requirements end-end. Needed no or minimum supervision.
-            Packing material used were of high standard, resulting no damage
-            delivery. My requirement had the complexity of moving big articles
-            through stairs to 8th floor, which was handled very efficiently.In
-            summary, I was fully satisfied with the service received and would
-            recommend others.
+            I got to know about MFI Pick N Track - Bangalore from one of my friend.
+             I took their to transport the full household things (TV, Table, Beds, Fridge, Kitchen items, Clothes, etc.)
+              from Hyderabad to Bengaluru. All communication was very smooth and transparent. Their team came to Hyderabad house
+               2 days before and estimated the cost for transport. On the day of transport whole team of 3 persons came and packed every 
+               single item with Bubble sheet/Boxes etc. They are fast and expert in their work. They arrange separate tempo for us. Best part was, whole thing safely reached Bengaluru next morning only. At Bengaluru location also, their team unpacked everything. I do recommended MFI
+             for others whenever it's requires. Keep doing good work. Good luck MFI Pick N Track - Bangalore. Thanks for the support.
           </p>
         </div>
         <div class="mySlides fade">
-          <p class="text-[#808080] text-center my-5">Somani Keshari Mam</p>
+          <p class="text-[#808080] text-center my-5">Sarthak Budhia</p>
           <p class="text-xs lg:text-base text-justify mx-10 lg:mx-24">
-            I had used the service of MFI's Pick N Track - Bangalore for my
-            house shifting. They delivered timely service. Took care of my
-            movement requirements end-end. Needed no or minimum supervision.
-            Packing material used were of high standard, resulting no damage
-            delivery. My requirement had the complexity of moving big articles
-            through stairs to 8th floor, which was handled very efficiently.In
-            summary, I was fully satisfied with the service received and would
-            recommend others.
+            First Mr Ajit always pays regards to your individual requirements and tries to make the relocation extremely hassle free.
+            Also the quality of packing material used was extremely goods. Even my neighbours were impressed with their packing and 
+            loading standards. 
+            Though we faced a few hiccups but Mr Ajit never lets you get bothered and looked into each aspect personally.
           </p>
         </div>
 
@@ -750,213 +750,10 @@
      
     <%-include('partials/footer')-%>
     <!-- ..................................................... -->
-  </body>
-</div>
-  <script>
-    function search_cities() {
-    let input = document.getElementById('searchbar').value
-    input=input.toLowerCase();
-    let x = document.getElementsByClassName('cities');
-      
-    for (i = 0; i < x.length; i++) { 
-        if (!x[i].innerHTML.toLowerCase().includes(input))
-         {
-            x[i].style.display="none";
-         }
-        else {
-            x[i].style.display="";                 
-        }
-    }
-}
+  </div>
+</body>
 
-const varbody = document.getElementById('struct')
-function blurbody()
-{
-  varbody.style.opacity='0.2'
-  varbody.style.pointerEvents='none'
-}
-function freebody()
-{
-      varbody.style.opacity='1'
-      varbody.style.pointerEvents='auto'
-}
-function prt() {
-    document.getElementById('popuppage').style.display = 'block';
-     blurbody();
-  }
-  setTimeout(prt, 2000);
-  document.getElementById("closePopup")
-    .addEventListener("click", function () {
-      document.getElementById('popuppage').style.display = 'none';
-      freebody()
-    });
-
-
-    ///
-    // mobile menu
-    const burger = document.getElementById('burger')
-    const navbar = document.getElementById('navbar')
-    const navlist = document.getElementById('nav-list')
-    const closemenu = document.getElementById('closemenu')
-    burger.addEventListener('click',function openmenu()
-    {
-            navbar.style.maxHeight='300px'
-            navlist.style.opacity='1'
-            navlist.style.pointerEvents='auto'
-            closemenu.style.display='block'
-            burger.style.display='none'
-    })
-    closemenu.addEventListener('click',function closenav()
-    {
-        burger.style.display='block'
-        closemenu.style.display='none'
-        navlist.style.opacity='0'
-        navbar.style.maxHeight='60px'
-        navlist.style.pointerEvents='none'
-    })
-
-
-      // slider
-      let slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-     }
-     // to get user location code................
-     let locationButton = document.getElementById("get-location");
-            let locationDiv = document.getElementById("location-details");
-            locationButton.addEventListener("click", () => {
-  //Geolocation APU is used to get geographical position of a user and is available inside the navigator object
-  if (navigator.geolocation) {
-    //returns position(latitude and longitude) or error
-    navigator.geolocation.getCurrentPosition(showLocation, checkError);
-  } else {
-    //For old browser i.e IE
-    locationDiv.innerText = "The browser does not support geolocation";
-  }
-});
-//Error Checks
-const checkError = (error) => {
-  switch (error.code) {
-    case error.PERMISSION_DENIED:
-      locationDiv.innerText = "Please allow access to location";
-      break;
-    case error.POSITION_UNAVAILABLE:
-      //usually fired for firefox
-      locationDiv.innerText = "Location Information unavailable";
-      break;
-    case error.TIMEOUT:
-      locationDiv.innerText = "The request to get user location timed out";
-  }
-};
-const showLocation = async (position) => {
-  //We user the NOminatim API for getting actual addres from latitude and longitude
-  let response = await fetch(
-    `https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`
-  );
-  //store response object
-  let data = await response.json();
-  if(`${data.address.city}`=='undefined')
-  {
-    locationDiv.innerText=`${data.address.country}`
-  }
-  else
-  {
-  locationDiv.innerText = `${data.address.city}, ${data.address.country}`;
-  }
-};
-const privacypopup = document.getElementById('privacypopup')
-    document.getElementById('closeprivacypopup').addEventListener('click',closepopup)
-    function closepopup()
-    {
-        console.log("button chal rha hai")
-        privacypopup.style.display='none'
-        var struct = document.getElementById('struct')
-        struct.style.opacity='1'
-        struct.style.pointerEvents='auto'
-    }  
-     //open popuop
-    document.getElementById('openprivacypopup').addEventListener('click',openpopup)
-    document.getElementById('openmobprivacypopup').addEventListener('click',openpopup)
-    function openpopup()
-    {
-        console.log(" open button chal rha hai")
-        privacypopup.style.display='block'
-        privacypopup.style.opacity='1'
-        var struct=document.getElementById('struct');
-        struct.style.opacity='0.2'
-        struct.style.pointerEvents='none'
-    }  
-// terms popup
-const termspopup = document.getElementById('termspopup')
-    document.getElementById('closetermspopup').addEventListener('click',closetermspopup)
-    function closetermspopup()
-    {
-        console.log("button chal rha hai")
-        termspopup.style.display='none'
-        var struct = document.getElementById('struct')
-        struct.style.opacity='1'
-        struct.style.pointerEvents='auto'
-    }  
-     //open popuop
-    document.getElementById('opentermspopup').addEventListener('click',opentermspopup)
-    document.getElementById('openmobtermspopup').addEventListener('click',opentermspopup)
-    function opentermspopup()
-    {
-        console.log(" open button chal rha hai")
-        termspopup.style.display='block'
-        termspopup.style.opacity='1'
-        var struct=document.getElementById('struct');
-        struct.style.opacity='0.2'
-        struct.style.pointerEvents='none'
-    } 
-    // Faq popup
-const faqpopup = document.getElementById('faqpopup')
-    document.getElementById('closefaqpopup').addEventListener('click',closefaqpopup)
-    function closefaqpopup()
-    {
-        console.log("button chal rha hai")
-        faqpopup.style.display='none'
-        var struct = document.getElementById('struct')
-        struct.style.opacity='1'
-        struct.style.pointerEvents='auto'
-    }  
-     //open popuop
-    document.getElementById('openfaqpopup').addEventListener('click',openfaqpopup)
-    document.getElementById('openmobfaqpopup').addEventListener('click',openfaqpopup)
-    function openfaqpopup()
-    {
-        console.log(" open button chal rha hai")
-        faqpopup.style.display='block'
-        faqpopup.style.opacity='1'
-        var struct=document.getElementById('struct');
-        struct.style.opacity='0.2'
-        struct.style.pointerEvents='none'
-    } 
+  <script  src="../assets/home.js">
+  
   </script>
 </html>

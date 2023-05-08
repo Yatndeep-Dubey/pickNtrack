@@ -1,4 +1,4 @@
-<footer class="bg-blackish text-white footer-home">
+<footer class="bg-blackish text-white footer-home" id="footer-blur" >
   <div class="flex justify-between border-b-2">
     <div class="border-r-2 flex flex-col w-1/4 p-16">
       <p>Sitemap</p>
@@ -12,20 +12,20 @@
     <div class="border-r-2 flex flex-col w-1/4 p-16">
       <p>Support</p>
       <ul class="text-[#b8b8b8] my-10 space-y-5">
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#" id="openfaqpopup">FAQ's</a></li>
+        <li><a href="#" id="opendispopup">Disclaimer</a></li>
+        <li><a  href="#"id="openfaqpopup">FAQ's</a></li>
         <li ><a href="#" id="openprivacypopup">Privacy Policy</a></li>
-        <li><a href="#" id="opentermspopup">Terms & Conditions</a></li>
+        <li><a  href="#" id="opentermspopup">Terms & Conditions</a></li>
       </ul>
     </div>
 
     <div class="border-r-2 flex flex-col w-1/4 p-16">
       <p>Customer Care</p>
       <ul class="text-[#b8b8b8] my-10 text-sm space-y-5">
-        <li><a href="#">Timings: 10AM-6PM (Mon-Sat)</a></li>
-        <li><a href="#">Call: +91 9538531818</a></li>
+        <li><a >Timings: 10AM-6PM (Mon-Sat)</a></li>
+        <li><a>Call: <span> <a href="tel:+919538531818">+91 9538531818</a></span></a></li>
         <li>
-          <a href="#">Email: info@pickntrack.com/ pickntrack@gmail.com</a>
+          <a>Email:<span><a href="mailto:info@pickntrack.com">info@pickntrack.com</a>/</span> <span><a href="mailto:pickntrack@gmail.com">pickntrack@gmail.com</a></span></a>
         </li>
       </ul>
     </div>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="p-10">
-        <p>Pick N Track App coming Soon On Google Play & Apple Store</p>
+        <p class="text-sm">Pick N Track App coming Soon On Google Play & Apple Store</p>
         <div class="flex">
           <img
             src="public/images/playstore.svg"
@@ -66,63 +66,63 @@
   <div class="p-5 flex justify-evenly items-center">
     <ul class="flex gap-2">
       <li>
-        <a href="/"
+        <a 
           ><img src="public/images/twitter.svg" alt="twitter logo" class="w-6"
         /></a>
       </li>
       <li>
-        <a href="/"
+        <a 
           ><img src="public/images/fb.svg" alt="facebook logo" class="w-6"
         /></a>
       </li>
       <li>
-        <a href="/"
+        <a 
           ><img src="public/images/linkedin.svg" alt="linkedin logo" class="w-6"
         /></a>
       </li>
       <li>
-        <a href="/"
+        <a 
           ><img src="public/images/pinterest.svg" alt="pinterest logo" class="w-6"
         /></a>
       </li>
       <li>
-        <a href="/"
+        <a 
           ><img src="public/images/yt.svg" alt="youtube logo" class="w-6"
         /></a>
       </li>
     </ul>
 
     <p class="text-xs">Copyright &copy; 2020 All rights reserved.</p>
-    <img src="public/images/razorpay.svg" alt="razor pay logo" class="w-24 lg:w-32" />
+    <img src="public/images/razorpay.svg" alt="razor pay logo" class="w-24 lg:w-32 lg:ml-24" />
   </div>
 </footer>
 
 
 <!--Footer ends-->
 
-<footer class="footer-1 bg-black py-8 sm:py-12 mob-footer">
+<footer class="footer-1 bg-black py-8 sm:py-12 mob-footer" id="mob-footer-blur">
   <div class="container mx-auto px-4">
     <div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
       <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
-        <h5 class="text-xl font-bold mb-6 text-white">Sitemap</h5>
+        <h5 class="text-2xl font-bold mb-6 text-white">Sitemap</h5>
         <ul class="list-none footer-links">
           <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800  text-white">Home</a>
+            <a href="/" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800  text-white">Home</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800  text-white">About</a>
+            <a href="/about" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800  text-white">About</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800  text-white">Contact Us</a>
+            <a href="/contact" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800  text-white">Contact Us</a>
           </li>
          
         </ul>
       </div>
       <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
-        <h5 class="text-xl font-bold mb-6  text-white">Support</h5>
+        <h5 class="text-2xl font-bold mb-6  text-white">Support</h5>
         <ul class="list-none footer-links">
           <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800  text-white">Disclaimer</a>
+            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800  text-white" id="openmobdispopup">Disclaimer</a>
           </li>
           
           <li class="mb-2">
@@ -137,34 +137,34 @@
         </ul>
       </div>
       <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
-        <h5 class="text-xl font-bold mb-6  text-white">Customer Care</h5>
+        <h5 class="text-2xl font-bold mb-6  text-white">Customer Care</h5>
         <ul class="list-none footer-links">
           <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-white">Timings: 10AM-6PM (Mon-Sat)</a>
+            <a  class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-white">Timings: 10AM-6PM (Mon-Sat)</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-white">Call: +91 9538531818</a>
+            <a  href="tel:9538531818" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-white">Call:+91 953-853-1818</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-white">Email: info@pickntrack.com/
-              pickntrack@gmail.com</a>
+            <a href="mailto:pickntrack@gmail.com" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-white">Email:info@pickntrack.com /
+             pickntrack@gmail.com</a>
           </li>
         
         </ul>
       </div>
-      <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
-        <h5 class="text-xl font-bold mb-6 text-white">Subscribe</h5>
+      <div class="px-4 sm:w-1/2  md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+        <h5 class="text-2xl font-bold mb-6 text-white">Subscribe</h5>
         <ul class="list-none footer-links">
           <li class="mb-2">
             <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800 text-white">Want to receive amazing updates <br> from Pick’N Track?</a>
           </li>
-
-          <p class="flex h-12 w-1/2 justify-between items-center bg-slate-200 rounded-full  my-10">
-          <img src="public/images/email-logo.png" alt="email logo" class="h-5 ml-[2px] " />
-          <input type="text" placeholder="Enter.... " class="bg-transparent w-[100%] mr-[12px] focus:outline-none"  />
-          <p class="text-black text-xl mr-10">&rarr;</p>
+          
+          <div class="flex h-12 w-full justify-between items-center bg-slate-200 rounded-full  my-10">
+          <img src="public/images/email-logo.png" alt="email logo" class="h-5 ml-[10px] " />
+          <input type="text" placeholder="Enter your email " class="bg-transparent w-[100%] mr-[12px] focus:outline-none mx-5"  />
+          <p class="text-black text-xl mr-5">&rarr;</p>
       
-        </p>
+          </div>
 
 <hr>
          <p class="text-white">  <br>  Pick N Track App coming Soon On Google Play & Apple Store </p> <br>
@@ -178,29 +178,29 @@
     <div class="sm:flex sm:flex-wrap sm:-mx-4 mt-6 pt-6 sm:mt-12 sm:pt-12 border-t object-center">
       <div class="sm:w-full px-4 md:w-1/6">
         <strong class="justify-center">
-          <ul class="flex gap-2 justify-center">
+          <ul class="flex gap-2 ">
             <li>
-              <a href="/"
+              <a 
                 ><img src="public/images/twitter.png" alt="twitter logo" class="w-6"
               /></a>
             </li>
             <li>
-              <a href="/"
+              <a 
                 ><img src="public/images/fb.png" alt="facebook logo" class="w-3"
               /></a>
             </li>
             <li>
-              <a href="/"
+              <a 
                 ><img src="public/images/vector (2).png" alt="linkedin logo" class="w-6"
               /></a>
             </li>
             <li>
-              <a href="/"
+              <a 
                 ><img src="public/images/pinterest.png" alt="pinterest logo" class="w-6"
               /></a>
             </li>
             <li>
-              <a href="/"
+              <a
                 ><img src="./public/images/vector (4).png" alt="youtube logo" class="w-6"
               /></a>
             </li>

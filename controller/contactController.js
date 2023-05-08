@@ -2,6 +2,8 @@
 const nodemailer= require('nodemailer')
 const contactModel= require('../models/contactModel')
 const quickenquiryModel= require('../models/quickenquiryModel')
+const adminModel = require('../models/adminModel')
+
 
 const sendmail2 = async (receiver,subject,messageusr)=>
 {
@@ -63,6 +65,7 @@ const acceptcontact= async function(req,res)
       </body>
   </html>
   `
+  const today = new Date();
   const singleusercontact=new contactModel(
     {
       name:req.body.name,
@@ -71,7 +74,8 @@ const acceptcontact= async function(req,res)
       countrycode:req.body.countrycode,
       location:req.body.location,
       queryusr:req.body.query,
-      message:req.body.message
+      message:req.body.message,
+      date:today
     });
     try
     {
@@ -92,6 +96,7 @@ const acceptcontact= async function(req,res)
 const acceptquickenquiry = async function(req,res)
 {
   const recieveremail = req.body.email
+  const todate =new Date();
   const subject = "Enquiry Submitted"
   const message = "Your Enquiry is submitted"
   const singleenquiry=new quickenquiryModel(
@@ -101,7 +106,8 @@ const acceptquickenquiry = async function(req,res)
       phone:req.body.phone,
       countrycode:req.body.countrycode,
       location:req.body.location,
-      message:req.body.message
+      message:req.body.message,
+      date:todate
     });
     try
     {
@@ -114,8 +120,47 @@ const acceptquickenquiry = async function(req,res)
       console.log(error.message)
     }
 }
+const quickemails = async function(req,res)
+{
+    const allquickemails = await quickenquiryModel.find()
+    res.render('quick',{allmails:allquickemails})
+}
+const contactemails = async function(req,res)
+{
+    const allcontactemails = await contactModel.find()
+    res.render('contactmails',{allemails:allcontactemails})
+}
+const adminlogin = async function(req,res){
+  const adminname = req.body.username
+  const pass = req.body.password
+  const singleadmin = await adminModel.findOne({username:adminname})
+  if(singleadmin)
+  {
+    
+    if(singleadmin.pass == pass)
+    {
+      req.session.admin_id = singleadmin._id
+      res.redirect('/adminpage')
+    }
+    else
+    {
+      res.render('adminloginpage')
+    }
+  }
+  else
+  {
+    res.render('adminloginpage')
+  }
+}
+const renderadminpage = async function(req,res){
+  await res.render('adminpage')
+}
 module.exports=
 {
     acceptcontact,
-    acceptquickenquiry
+    acceptquickenquiry,
+    quickemails,
+    contactemails,
+    adminlogin,
+    renderadminpage
 }
